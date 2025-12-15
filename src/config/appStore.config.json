@@ -1,0 +1,24 @@
+{
+  "ios": {
+    "enabled": true,
+    "isLive": false,
+    "comingSoonText": "Coming Soon",
+    "storeUrl": "https://apps.apple.com/app/lovebae/id123456789",
+    "storeName": "App Store"
+  },
+  "android": {
+    "enabled": false,
+    "isLive": false,
+    "comingSoonText": "Coming Soon",
+    "storeUrl": "https://play.google.com/store/apps/details?id=com.lovebae.app",
+    "storeName": "Google Play"
+  },
+  "waitlistUrl": "/waitlist",
+  "showWaitlistAsFallback": true,
+  "socialProof": {
+    "rating": 4.9,
+    "couplesCount": "50K+",
+    "showRating": false,
+    "showCouplesCount": false
+  }
+}
