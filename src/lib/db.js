@@ -54,10 +54,14 @@ export async function connectToDatabase() {
   }
 
   if (!cached.promise) {
+    // Use different database names based on environment
+    const dbName = process.env.NODE_ENV === 'production' ? 'lovebae' : 'lovebae_dev';
+    console.log(`Using database: ${dbName} (NODE_ENV: ${process.env.NODE_ENV})`);
+    
     const opts = {
       bufferCommands: false,
       serverSelectionTimeoutMS: 30000,
-      dbName: 'lovebae',
+      dbName,
       serverApi: {
         version: '1',
         strict: true,

@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { hash } from 'bcryptjs';
 import { connectToDatabase } from '@/lib/db';
 import User from '@/models/User';
-import Blog from '@/models/Blog';
 
 // Get a specific user by ID
 export async function GET(request, { params }) {
@@ -18,14 +17,7 @@ export async function GET(request, { params }) {
       );
     }
     
-    // Get the blog count for this user
-    const blogCount = await Blog.countDocuments({ authorId: id });
-    
-    // Convert to plain object and add blog count
-    const userWithBlogCount = user.toObject();
-    userWithBlogCount.blogCount = blogCount;
-    
-    return NextResponse.json(userWithBlogCount);
+    return NextResponse.json(user.toObject());
   } catch (error) {
     console.error('Error fetching user:', error);
     return NextResponse.json(

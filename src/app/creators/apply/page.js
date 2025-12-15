@@ -1,11 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { CreatorApplicationForm } from '@/components/creators/CreatorApplicationForm';
 
-export default function CreatorApplyPage() {
+function CreatorApplyContent() {
   const searchParams = useSearchParams();
   const referralCode = searchParams.get('ref') || '';
 
@@ -76,5 +76,20 @@ export default function CreatorApplyPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CreatorApplyPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen py-16 bg-gradient-to-br from-pink-50 via-white to-red-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-500 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading...</p>
+        </div>
+      </div>
+    }>
+      <CreatorApplyContent />
+    </Suspense>
   );
 }

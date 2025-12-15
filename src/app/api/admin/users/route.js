@@ -2,34 +2,15 @@ import { NextResponse } from 'next/server';
 import { hash } from 'bcryptjs';
 import { connectToDatabase } from '@/lib/db';
 import User from '@/models/User';
-import Blog from '@/models/Blog';
 
-// Get all users with blog count
+// Get all users
 export async function GET() {
   try {
     await connectToDatabase();
     
-    // Get all users
     const users = await User.find({}).select('-password').lean();
     
-    // Get blog counts for each user
-    const blogCounts = await Blog.aggregate([
-      { $group: { _id: '$authorId', count: { $sum: 1 } } }
-    ]);
-    
-    // Create a map of user ID to blog count
-    const blogCountMap = blogCounts.reduce((acc, item) => {
-      acc[item._id] = item.count;
-      return acc;
-    }, {});
-    
-    // Add blog count to each user
-    const usersWithBlogCount = users.map(user => ({
-      ...user,
-      blogCount: blogCountMap[user._id.toString()] || 0
-    }));
-    
-    return NextResponse.json(usersWithBlogCount);
+    return NextResponse.json(users);
   } catch (error) {
     console.error('Error fetching users:', error);
     return NextResponse.json(
