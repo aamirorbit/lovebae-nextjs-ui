@@ -25,22 +25,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 Copy `.env.local.example` to `.env.local` and configure:
 
-```env
-# MongoDB
-MONGODB_URI=your-mongodb-connection-string
-
-# Firebase Storage
-NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
-
-# Admin Auth
-ADMIN_SECRET=your-admin-secret
-```
-
 ## Configuration
 
 ### App Store Buttons
