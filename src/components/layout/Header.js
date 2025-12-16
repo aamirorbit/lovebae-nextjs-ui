@@ -31,15 +31,33 @@ const Header = () => {
               </span>
           </Link>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            <Link 
+              href="/blog" 
+              className="text-gray-700 hover:text-red-500 font-medium transition-colors"
+            >
+              Blog
+            </Link>
+            <Link 
+              href="/creators" 
+              className="text-gray-700 hover:text-red-500 font-medium transition-colors"
+            >
+              Creators
+            </Link>
+            <Link 
+              href="/support" 
+              className="text-gray-700 hover:text-red-500 font-medium transition-colors"
+            >
+              Support
+            </Link>
             <Link 
               href="/waitlist" 
               className="bg-red-500 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-red-600 transition-colors shadow-sm hover:shadow-md"
             >
               Try for Free
             </Link>
-          </div>
+          </nav>
 
           {/* Mobile menu button */}
           <button 
@@ -74,6 +92,13 @@ const Header = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Blog
+                </Link>
+                <Link 
+                  href="/creators"
+                  className="text-2xl font-semibold text-gray-900 hover:text-red-500"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Creators
                 </Link>
                 <Link 
                   href="/support"
