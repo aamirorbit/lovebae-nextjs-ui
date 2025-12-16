@@ -120,7 +120,7 @@ export function WaitlistForm() {
         <Button 
           onClick={() => setIsSuccess(false)}
           variant="outline"
-          className="border-red-600 text-red-600 hover:bg-red-50"
+          className="border-[#E7000B] text-[#E7000B] hover:bg-red-50"
         >
           Add Another Email
         </Button>
@@ -131,13 +131,13 @@ export function WaitlistForm() {
   return (
     <Form onSubmit={handleSubmit} className="space-y-6">
       {errors.submit && (
-        <div className="p-4 bg-red-50 border-l-4 border-red-500 text-red-700 mb-4 rounded">
+        <div className="p-4 bg-red-50 border-l-4 border-[#E7000B] text-red-700 mb-4 rounded">
           <p>{errors.submit}</p>
         </div>
       )}
       
       <FormField>
-        <FormLabel htmlFor="name">Your Name <span className="text-red-500">*</span></FormLabel>
+        <FormLabel htmlFor="name">Your Name <span className="text-[#E7000B]">*</span></FormLabel>
         <FormInput
           id="name"
           name="name"
@@ -149,7 +149,7 @@ export function WaitlistForm() {
       </FormField>
       
       <FormField>
-        <FormLabel htmlFor="email">Your Email <span className="text-red-500">*</span></FormLabel>
+        <FormLabel htmlFor="email">Your Email <span className="text-[#E7000B]">*</span></FormLabel>
         <FormInput
           id="email"
           name="email"
@@ -195,7 +195,7 @@ export function WaitlistForm() {
       <div className="pt-4">
         <Button
           type="submit"
-          className="w-full bg-red-600 hover:bg-red-700 py-6 text-lg rounded-full"
+          className="w-full bg-[#E7000B] hover:bg-[#C50009] py-6 text-lg rounded-full"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
@@ -214,9 +214,9 @@ export function WaitlistForm() {
       
       <p className="text-sm text-gray-500 text-center mt-6">
         By joining, you agree to our{' '}
-        <a href="/terms" className="text-red-600 hover:underline">Terms</a>{' '}
+        <a href="/terms" className="text-[#E7000B] hover:underline">Terms</a>{' '}
         and{' '}
-        <a href="/privacy" className="text-red-600 hover:underline">Privacy Policy</a>.
+        <a href="/privacy" className="text-[#E7000B] hover:underline">Privacy Policy</a>.
       </p>
     </Form>
   );

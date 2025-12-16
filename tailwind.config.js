@@ -20,11 +20,11 @@ module.exports = {
       colors: {
         border: '#e6e6e6',
         input: '#e6e6e6',
-        ring: '#ef4444',
+        ring: '#E7000B',
         background: '#ffffff',
         foreground: '#252525',
         primary: {
-          DEFAULT: '#ef4444',
+          DEFAULT: '#E7000B',
           foreground: '#fafafa',
         },
         secondary: {

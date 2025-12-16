@@ -75,7 +75,7 @@ export default async function Image() {
             style={{
               fontSize: 72,
               fontWeight: 700,
-              color: '#FF6B6B',
+              color: '#E7000B',
               letterSpacing: '-2px',
             }}
           >
@@ -117,7 +117,7 @@ export default async function Image() {
           style={{
             marginTop: 50,
             padding: '16px 40px',
-            background: '#FF6B6B',
+            background: '#E7000B',
             color: 'white',
             borderRadius: 50,
             fontSize: 24,

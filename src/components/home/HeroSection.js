@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-[#FFF0F5] via-[#FFF5F8] to-white -z-10"></div>
       
       {/* Decorative blobs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-[#FF6B6B]/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-[#E7000B]/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
       <div className="absolute top-40 right-10 w-72 h-72 bg-[#FFCDD2]/30 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
       
       <div className="container mx-auto px-4">
@@ -22,7 +22,7 @@ const HeroSection = () => {
           <div className="lg:w-1/2 text-center lg:text-left">
             <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-6">
               Make your relationship {' '}
-              <span className="text-[#FF6B6B]">10x</span> better.
+              <span className="text-[#E7000B]">10x</span> better.
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
@@ -135,8 +135,8 @@ const HeroSection = () => {
                       {/* Days together badge */}
                       <div className="flex justify-center mb-4">
                         <div className="inline-flex items-center gap-1.5 bg-[#FFF5F8] px-4 py-1.5 rounded-full">
-                          <span className="text-[#FF6B6B]">❤️</span>
-                          <span className="text-sm font-semibold text-[#FF6B6B]">247 days together</span>
+                          <span className="text-[#E7000B]">❤️</span>
+                          <span className="text-sm font-semibold text-[#E7000B]">247 days together</span>
                         </div>
                       </div>
                       
@@ -147,7 +147,7 @@ const HeroSection = () => {
                             <span>💝</span>
                             <span className="text-sm font-semibold text-gray-900">Daily Check-in</span>
                           </div>
-                          <span className="text-xs font-semibold text-[#FF6B6B] bg-[#FCE7F3] px-2 py-0.5 rounded-full">+10 pts</span>
+                          <span className="text-xs font-semibold text-[#E7000B] bg-[#FCE7F3] px-2 py-0.5 rounded-full">+10 pts</span>
                         </div>
                         <p className="text-xs text-gray-500 mb-3">How are you feeling today?</p>
                         
@@ -161,7 +161,7 @@ const HeroSection = () => {
                           ].map((mood, i) => (
                             <div 
                               key={i} 
-                              className={`rounded-xl py-2 text-center ${i === 0 ? 'ring-2 ring-[#FF6B6B]' : ''}`}
+                              className={`rounded-xl py-2 text-center ${i === 0 ? 'ring-2 ring-[#E7000B]' : ''}`}
                               style={{ backgroundColor: mood.bg }}
                             >
                               <span className="text-lg">{mood.emoji}</span>
@@ -171,7 +171,7 @@ const HeroSection = () => {
                         </div>
                         
                         {/* Send Love button */}
-                        <button className="w-full bg-[#FF6B6B] text-white py-2.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2">
+                        <button className="w-full bg-[#E7000B] text-white py-2.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2">
                           <span>Send Love</span>
                         </button>
                       </div>

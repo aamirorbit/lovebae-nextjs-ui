@@ -150,12 +150,12 @@ function CodeLookupSection() {
                 value={email}
                 onChange={(e) => { setEmail(e.target.value); setError(''); }}
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E7000B] focus:border-transparent"
               />
               <button
                 type="submit"
                 disabled={isLoading}
-                className="px-6 py-3 bg-red-500 text-white rounded-xl font-semibold hover:bg-red-600 transition-colors disabled:opacity-50 whitespace-nowrap"
+                className="px-6 py-3 bg-[#E7000B] text-white rounded-xl font-semibold hover:bg-[#C50009] transition-colors disabled:opacity-50 whitespace-nowrap"
               >
                 {isLoading ? 'Looking...' : 'Get Code'}
               </button>
@@ -179,7 +179,7 @@ function CodeLookupSection() {
               <div className="bg-white rounded-xl p-4 border border-gray-100">
                 <p className="text-sm text-gray-500 mb-2">Your Referral Code</p>
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-2xl font-bold text-red-500">{result.referralCode}</span>
+                  <span className="font-mono text-2xl font-bold text-[#E7000B]">{result.referralCode}</span>
                   <button
                     onClick={handleCopy}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
@@ -202,7 +202,7 @@ function CodeLookupSection() {
           )}
           
           {error && (
-            <p className="text-red-500 text-sm mt-3 text-center">{error}</p>
+            <p className="text-[#E7000B] text-sm mt-3 text-center">{error}</p>
           )}
         </div>
       </div>
@@ -218,20 +218,20 @@ export default function CreatorsPage() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#FFF0F5] via-[#FFF5F8] to-white -z-10"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#FF6B6B]/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#E7000B]/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
         <div className="absolute top-40 right-10 w-72 h-72 bg-[#FFCDD2]/30 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
         
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center mb-6">
-              <span className="w-8 h-0.5 bg-red-500 rounded-full mr-2"></span>
-              <span className="text-red-500 font-medium text-sm uppercase tracking-wide">Creator Program</span>
-              <span className="w-8 h-0.5 bg-red-500 rounded-full ml-2"></span>
+              <span className="w-8 h-0.5 bg-[#E7000B] rounded-full mr-2"></span>
+              <span className="text-[#E7000B] font-medium text-sm uppercase tracking-wide">Creator Program</span>
+              <span className="w-8 h-0.5 bg-[#E7000B] rounded-full ml-2"></span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Partner with{' '}
-              <span className="text-[#FF6B6B]">Lovebae</span>
+              <span className="text-[#E7000B]">Lovebae</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 mb-4">
@@ -246,7 +246,7 @@ export default function CreatorsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/creators/apply"
-                className="inline-flex items-center justify-center bg-red-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center bg-[#E7000B] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#C50009] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Apply Now
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -255,7 +255,7 @@ export default function CreatorsPage() {
               </Link>
               <a
                 href="#how-it-works"
-                className="inline-flex items-center justify-center bg-white text-gray-700 px-8 py-4 rounded-full font-semibold text-lg border border-gray-200 hover:border-red-300 hover:text-red-500 transition-all"
+                className="inline-flex items-center justify-center bg-white text-gray-700 px-8 py-4 rounded-full font-semibold text-lg border border-gray-200 hover:border-[#E7000B]/30 hover:text-[#E7000B] transition-all"
               >
                 Learn More
               </a>
@@ -263,7 +263,7 @@ export default function CreatorsPage() {
             
             <p className="text-sm text-gray-500 mt-6">
               Already applied?{' '}
-              <a href="#get-code" className="text-red-500 hover:underline font-medium">
+              <a href="#get-code" className="text-[#E7000B] hover:underline font-medium">
                 Get your referral code
               </a>
             </p>
@@ -335,7 +335,7 @@ export default function CreatorsPage() {
             <div className="grid md:grid-cols-2 gap-8">
               {howItWorks.map((item, index) => (
                 <div key={index} className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#E7000B] rounded-full flex items-center justify-center text-white font-bold text-lg">
                     {item.step}
                   </div>
                   <div>
@@ -413,7 +413,7 @@ export default function CreatorsPage() {
             </p>
             <Link
               href="/creators/apply"
-              className="inline-flex items-center justify-center bg-white text-red-500 px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center bg-white text-[#E7000B] px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Apply Now
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

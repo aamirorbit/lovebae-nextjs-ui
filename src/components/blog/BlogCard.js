@@ -37,7 +37,7 @@ export default function BlogCard({ post }) {
       {/* Featured badge */}
       {featured && (
         <div className="absolute top-3 left-3 z-10">
-          <span className="bg-[#FF6B6B] text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">
+          <span className="bg-[#E7000B] text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">
             Featured
           </span>
         </div>
@@ -52,13 +52,13 @@ export default function BlogCard({ post }) {
       
       <div className="p-6">
         <div className="flex items-center justify-between mb-3">
-          <span className="inline-block bg-red-50 text-red-600 text-xs font-semibold px-3 py-1 rounded-full">
+          <span className="inline-block bg-red-50 text-[#E7000B] text-xs font-semibold px-3 py-1 rounded-full">
             {category}
           </span>
           <span className="text-xs text-gray-400">{readingTime}</span>
         </div>
         
-        <h2 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#FF6B6B] transition-colors line-clamp-2">
+        <h2 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#E7000B] transition-colors line-clamp-2">
           {title}
         </h2>
         
@@ -68,7 +68,7 @@ export default function BlogCard({ post }) {
         
         <div className="flex items-center justify-between text-xs text-gray-400">
           <span>{formattedDate}</span>
-          <span className="text-[#FF6B6B] font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
+          <span className="text-[#E7000B] font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
             Read more
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

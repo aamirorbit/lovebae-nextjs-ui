@@ -57,7 +57,7 @@ export default async function Image() {
         <div
           style={{
             padding: '10px 30px',
-            background: '#FF6B6B',
+            background: '#E7000B',
             borderRadius: 50,
             fontSize: 18,
             color: 'white',
@@ -100,7 +100,7 @@ export default async function Image() {
             style={{
               fontSize: 52,
               fontWeight: 700,
-              color: '#FF6B6B',
+              color: '#E7000B',
             }}
           >
             bae

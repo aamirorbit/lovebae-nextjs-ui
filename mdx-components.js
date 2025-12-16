@@ -24,12 +24,12 @@ export function useMDXComponents(components) {
       <li className="text-gray-600">{children}</li>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-[#FF6B6B] pl-4 italic text-gray-700 my-6 bg-red-50 py-4 rounded-r-lg">
+      <blockquote className="border-l-4 border-[#E7000B] pl-4 italic text-gray-700 my-6 bg-red-50 py-4 rounded-r-lg">
         {children}
       </blockquote>
     ),
     a: ({ href, children }) => (
-      <a href={href} className="text-[#FF6B6B] hover:text-[#E55555] underline">
+      <a href={href} className="text-[#E7000B] hover:text-[#C50009] underline">
         {children}
       </a>
     ),
@@ -40,7 +40,7 @@ export function useMDXComponents(components) {
       <em className="italic">{children}</em>
     ),
     code: ({ children }) => (
-      <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-[#FF6B6B]">
+      <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-[#E7000B]">
         {children}
       </code>
     ),

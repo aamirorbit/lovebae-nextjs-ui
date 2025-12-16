@@ -37,7 +37,7 @@ export default function CategoryFilter({ categories }) {
               onClick={() => handleCategoryClick(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
                 isActive
-                  ? 'bg-[#FF6B6B] text-white shadow-md'
+                  ? 'bg-[#E7000B] text-white shadow-md'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >

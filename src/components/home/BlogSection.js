@@ -55,11 +55,11 @@ const BlogSection = () => {
               </div>
               
               <div className="p-6">
-                <span className="inline-block bg-red-50 text-red-600 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                <span className="inline-block bg-red-50 text-[#E7000B] text-xs font-semibold px-3 py-1 rounded-full mb-3">
                   {article.category}
                 </span>
                 
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-red-500 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#E7000B] transition-colors">
                   {article.title}
                 </h3>
                 
@@ -74,7 +74,7 @@ const BlogSection = () => {
         <div className="text-center mt-10">
           <Link 
             href="/blog"
-            className="inline-flex items-center text-red-500 font-semibold hover:text-red-600 transition-colors"
+            className="inline-flex items-center text-[#E7000B] font-semibold hover:text-[#C50009] transition-colors"
           >
             View all articles
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

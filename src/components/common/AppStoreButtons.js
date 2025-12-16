@@ -93,7 +93,7 @@ const AppStoreButtons = ({
               </div>
             </div>
             {/* Coming soon badge - positioned outside the button */}
-            <div className="absolute -top-2 -right-2 bg-[#FF6B6B] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md z-10">
+            <div className="absolute -top-2 -right-2 bg-[#E7000B] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md z-10">
               SOON
             </div>
           </div>
@@ -131,7 +131,7 @@ const AppStoreButtons = ({
               </div>
             </div>
             {/* Coming soon badge - positioned outside the button */}
-            <div className="absolute -top-2 -right-2 bg-[#FF6B6B] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md z-10">
+            <div className="absolute -top-2 -right-2 bg-[#E7000B] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md z-10">
               SOON
             </div>
           </div>

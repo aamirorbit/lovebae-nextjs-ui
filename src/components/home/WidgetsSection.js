@@ -9,7 +9,7 @@ const WidgetsSection = () => {
     ocean: 'linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%)',
     peach: 'linear-gradient(135deg, #FFB88C 0%, #DE6262 100%)',
     aurora: 'linear-gradient(135deg, #A8EDEA 0%, #FED6E3 100%)',
-    lovebae: 'linear-gradient(135deg, #FF6B6B 0%, #FFCDD2 100%)',
+    lovebae: 'linear-gradient(135deg, #E7000B 0%, #FFCDD2 100%)',
     night: 'linear-gradient(135deg, #0F2027 0%, #2C5364 100%)',
   };
 

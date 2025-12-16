@@ -27,7 +27,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center z-50">
             <span className="text-xl font-bold text-gray-900">
-              Love<span className="text-red-500">bae</span>
+              Love<span className="text-[#E7000B]">bae</span>
               </span>
           </Link>
 
@@ -35,25 +35,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             <Link 
               href="/blog" 
-              className="text-gray-700 hover:text-red-500 font-medium transition-colors"
+              className="text-gray-700 hover:text-[#E7000B] font-medium transition-colors"
             >
               Blog
             </Link>
             <Link 
               href="/creators" 
-              className="text-gray-700 hover:text-red-500 font-medium transition-colors"
+              className="text-gray-700 hover:text-[#E7000B] font-medium transition-colors"
             >
               Creators
             </Link>
             <Link 
               href="/support" 
-              className="text-gray-700 hover:text-red-500 font-medium transition-colors"
+              className="text-gray-700 hover:text-[#E7000B] font-medium transition-colors"
             >
               Support
             </Link>
             <Link 
               href="/waitlist" 
-              className="bg-red-500 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-red-600 transition-colors shadow-sm hover:shadow-md"
+              className="bg-[#E7000B] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#C50009] transition-colors shadow-sm hover:shadow-md"
             >
               Try for Free
             </Link>
@@ -81,35 +81,35 @@ const Header = () => {
               <div className="flex flex-col items-center space-y-8">
                 <Link 
                   href="/"
-                  className="text-2xl font-semibold text-gray-900 hover:text-red-500"
+                  className="text-2xl font-semibold text-gray-900 hover:text-[#E7000B]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link 
                   href="/blog"
-                  className="text-2xl font-semibold text-gray-900 hover:text-red-500"
+                  className="text-2xl font-semibold text-gray-900 hover:text-[#E7000B]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Blog
                 </Link>
                 <Link 
                   href="/creators"
-                  className="text-2xl font-semibold text-gray-900 hover:text-red-500"
+                  className="text-2xl font-semibold text-gray-900 hover:text-[#E7000B]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Creators
                 </Link>
                 <Link 
                   href="/support"
-                  className="text-2xl font-semibold text-gray-900 hover:text-red-500"
+                  className="text-2xl font-semibold text-gray-900 hover:text-[#E7000B]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Support
                 </Link>
                 <Link 
                   href="/waitlist"
-                  className="bg-red-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-600"
+                  className="bg-[#E7000B] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#C50009]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Try for Free

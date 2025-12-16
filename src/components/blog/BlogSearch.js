@@ -53,7 +53,7 @@ export default function BlogSearch() {
           placeholder="Search articles..."
           value={query}
           onChange={handleChange}
-          className="w-full pl-10 pr-10 py-3 rounded-full border border-gray-200 focus:border-[#FF6B6B] focus:ring-2 focus:ring-[#FF6B6B]/20 outline-none transition-all bg-white"
+          className="w-full pl-10 pr-10 py-3 rounded-full border border-gray-200 focus:border-[#E7000B] focus:ring-2 focus:ring-[#E7000B]/20 outline-none transition-all bg-white"
         />
         
         {/* Search icon */}

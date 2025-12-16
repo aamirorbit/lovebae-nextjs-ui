@@ -95,12 +95,12 @@ const components = {
     <li className="text-gray-600">{children}</li>
   ),
   blockquote: ({ children }) => (
-    <blockquote className="border-l-4 border-[#FF6B6B] pl-4 italic text-gray-700 my-6 bg-red-50 py-4 pr-4 rounded-r-lg">
+    <blockquote className="border-l-4 border-[#E7000B] pl-4 italic text-gray-700 my-6 bg-red-50 py-4 pr-4 rounded-r-lg">
       {children}
     </blockquote>
   ),
   a: ({ href, children }) => (
-    <a href={href} className="text-[#FF6B6B] hover:text-[#E55555] underline">
+    <a href={href} className="text-[#E7000B] hover:text-[#C50009] underline">
       {children}
     </a>
   ),
@@ -181,7 +181,7 @@ export default async function BlogPostPage({ params }) {
               {/* Back link */}
               <Link 
                 href="/blog"
-                className="inline-flex items-center text-gray-600 hover:text-[#FF6B6B] mb-6 transition-colors"
+                className="inline-flex items-center text-gray-600 hover:text-[#E7000B] mb-6 transition-colors"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -240,7 +240,7 @@ export default async function BlogPostPage({ params }) {
         )}
         
         {/* CTA Section */}
-        <div className="bg-gradient-to-br from-[#FF6B6B] to-[#E55555] py-12">
+        <div className="bg-gradient-to-br from-[#E7000B] to-[#C50009] py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center text-white">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
@@ -251,7 +251,7 @@ export default async function BlogPostPage({ params }) {
               </p>
               <Link 
                 href="/waitlist"
-                className="inline-flex items-center bg-white text-[#FF6B6B] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center bg-white text-[#E7000B] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Early Access
               </Link>

@@ -151,7 +151,7 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
         {successData && (
           <div className="bg-[#FFF5F8] rounded-xl p-6 mb-6 max-w-sm mx-auto">
             <p className="text-sm text-gray-500 mb-2">Your referral code (active after approval):</p>
-            <p className="font-mono text-xl font-bold text-red-500 mb-3">{successData.referralCode}</p>
+            <p className="font-mono text-xl font-bold text-[#E7000B] mb-3">{successData.referralCode}</p>
             <p className="text-xs text-gray-400">
               Save this code or access it anytime from your dashboard
             </p>
@@ -162,7 +162,7 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
         </p>
         <a 
           href="/creators#get-code"
-          className="inline-flex items-center justify-center bg-white text-red-500 border border-red-200 px-6 py-3 rounded-full font-semibold hover:bg-red-50 transition-colors"
+          className="inline-flex items-center justify-center bg-white text-[#E7000B] border border-red-200 px-6 py-3 rounded-full font-semibold hover:bg-red-50 transition-colors"
         >
           Back to Creator Program
         </a>
@@ -188,7 +188,7 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
         </h3>
         
         <FormField>
-          <FormLabel htmlFor="name">Full Name <span className="text-red-500">*</span></FormLabel>
+          <FormLabel htmlFor="name">Full Name <span className="text-[#E7000B]">*</span></FormLabel>
           <FormInput
             id="name"
             name="name"
@@ -201,7 +201,7 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
         
         <div className="grid md:grid-cols-2 gap-4">
           <FormField>
-            <FormLabel htmlFor="email">Email <span className="text-red-500">*</span></FormLabel>
+            <FormLabel htmlFor="email">Email <span className="text-[#E7000B]">*</span></FormLabel>
             <FormInput
               id="email"
               name="email"
@@ -214,7 +214,7 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
           </FormField>
           
           <FormField>
-            <FormLabel htmlFor="phone">Phone Number <span className="text-red-500">*</span></FormLabel>
+            <FormLabel htmlFor="phone">Phone Number <span className="text-[#E7000B]">*</span></FormLabel>
             <FormInput
               id="phone"
               name="phone"
@@ -238,7 +238,7 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
           <FormField>
             <FormLabel htmlFor="instagramHandle">
               Instagram Handle
-              {!formData.tiktokHandle && <span className="text-red-500"> *</span>}
+              {!formData.tiktokHandle && <span className="text-[#E7000B]"> *</span>}
             </FormLabel>
             <div className="relative">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">@</span>
@@ -257,7 +257,7 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
           <FormField>
             <FormLabel htmlFor="tiktokHandle">
               TikTok Handle
-              {!formData.instagramHandle && <span className="text-red-500"> *</span>}
+              {!formData.instagramHandle && <span className="text-[#E7000B]"> *</span>}
             </FormLabel>
             <div className="relative">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">@</span>
@@ -287,7 +287,7 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
         
         <div className="grid md:grid-cols-2 gap-4">
           <FormField>
-            <FormLabel htmlFor="followerCount">Total Followers <span className="text-red-500">*</span></FormLabel>
+            <FormLabel htmlFor="followerCount">Total Followers <span className="text-[#E7000B]">*</span></FormLabel>
             <FormSelect
               id="followerCount"
               name="followerCount"
@@ -305,7 +305,7 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
           </FormField>
           
           <FormField>
-            <FormLabel htmlFor="audienceType">Audience Type <span className="text-red-500">*</span></FormLabel>
+            <FormLabel htmlFor="audienceType">Audience Type <span className="text-[#E7000B]">*</span></FormLabel>
             <FormSelect
               id="audienceType"
               name="audienceType"
@@ -371,7 +371,7 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
       <div className="pt-4">
         <Button
           type="submit"
-          className="w-full bg-red-500 hover:bg-red-600 py-6 text-lg rounded-full"
+          className="w-full bg-[#E7000B] hover:bg-[#C50009] py-6 text-lg rounded-full"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
@@ -390,9 +390,9 @@ export function CreatorApplicationForm({ referralCode: initialReferralCode = '' 
       
       <p className="text-sm text-gray-500 text-center mt-6">
         By submitting, you agree to our{' '}
-        <a href="/terms" className="text-red-500 hover:underline">Terms</a>{' '}
+        <a href="/terms" className="text-[#E7000B] hover:underline">Terms</a>{' '}
         and{' '}
-        <a href="/privacy" className="text-red-500 hover:underline">Privacy Policy</a>.
+        <a href="/privacy" className="text-[#E7000B] hover:underline">Privacy Policy</a>.
       </p>
     </Form>
   );

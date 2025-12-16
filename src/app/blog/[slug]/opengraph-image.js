@@ -39,7 +39,7 @@ export default async function Image({ params }) {
   const title = post?.frontmatter?.title || 'Lovebae Blog';
   const category = post?.frontmatter?.category || 'Blog';
   const emoji = categoryEmojis[category] || '❤️';
-  const accentColor = categoryColors[category] || '#FF6B6B';
+  const accentColor = categoryColors[category] || '#E7000B';
   
   return new ImageResponse(
     (
@@ -152,7 +152,7 @@ export default async function Image({ params }) {
               style={{
                 fontSize: 32,
                 fontWeight: 700,
-                color: '#FF6B6B',
+                color: '#E7000B',
               }}
             >
               bae

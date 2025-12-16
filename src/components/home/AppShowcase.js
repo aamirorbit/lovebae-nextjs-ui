@@ -30,7 +30,7 @@ const AppShowcase = () => {
     { name: 'Ocean', colors: ['#4FACFE', '#00F2FE'] },
     { name: 'Peach', colors: ['#FFB88C', '#DE6262'] },
     { name: 'Aurora', colors: ['#A8EDEA', '#FED6E3'] },
-    { name: 'Lovebae', colors: ['#FF6B6B', '#FFCDD2'] },
+    { name: 'Lovebae', colors: ['#E7000B', '#FFCDD2'] },
     { name: 'Night', colors: ['#0F2027', '#2C5364'] },
   ];
 
@@ -43,7 +43,7 @@ const AppShowcase = () => {
           {/* Left content */}
           <div className="lg:w-1/2 text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              Draw together on <br /><span className="text-[#FF6B6B]">shared canvas</span>
+              Draw together on <br /><span className="text-[#E7000B]">shared canvas</span>
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 max-w-xl mx-auto lg:mx-0">
@@ -84,7 +84,7 @@ const AppShowcase = () => {
             
             <Link 
               href="/waitlist"
-              className="inline-flex items-center bg-[#FF6B6B] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#E55555] transition-colors shadow-lg shadow-[#FF6B6B]/30"
+              className="inline-flex items-center bg-[#E7000B] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#C50009] transition-colors shadow-lg shadow-[#E7000B]/30"
             >
               Get Started
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -155,7 +155,7 @@ const AppShowcase = () => {
                     <div className="absolute bottom-8 left-4 right-4">
                       {/* Color palette */}
                       <div className="flex justify-center gap-2 mb-3 bg-black/60 rounded-full py-2.5 px-4">
-                        {['#FFFFFF', '#1A1A1A', '#FF6B6B', '#FF69B4', '#FFA500', '#FFD700', '#4ADE80', '#60A5FA', '#A78BFA'].map((color, i) => (
+                        {['#FFFFFF', '#1A1A1A', '#E7000B', '#FF69B4', '#FFA500', '#FFD700', '#4ADE80', '#60A5FA', '#A78BFA'].map((color, i) => (
                           <div 
                             key={i}
                             className={`w-5 h-5 rounded-full ${color === '#FFFFFF' ? 'ring-2 ring-white ring-offset-1 ring-offset-transparent' : ''}`}
@@ -208,7 +208,7 @@ const AppShowcase = () => {
                   className={`group flex flex-col items-center gap-1 ${selectedGradient.name === gradient.name ? 'scale-110' : ''} transition-transform`}
                 >
                   <div 
-                    className={`w-10 h-10 rounded-full shadow-md ${selectedGradient.name === gradient.name ? 'ring-2 ring-[#FF6B6B] ring-offset-2' : ''}`}
+                    className={`w-10 h-10 rounded-full shadow-md ${selectedGradient.name === gradient.name ? 'ring-2 ring-[#E7000B] ring-offset-2' : ''}`}
                     style={{ background: `linear-gradient(135deg, ${gradient.colors[0]} 0%, ${gradient.colors[1]} 100%)` }}
                   />
                   <span className="text-xs text-gray-500 group-hover:text-gray-700">{gradient.name}</span>

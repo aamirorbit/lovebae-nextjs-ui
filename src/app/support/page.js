@@ -123,7 +123,7 @@ export default function SupportPage() {
                     onChange={handleChange}
                     required
                     placeholder="Enter your name"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#FF6B6B] focus:ring-2 focus:ring-[#FF6B6B]/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#E7000B] focus:ring-2 focus:ring-[#E7000B]/20 outline-none transition-all"
                   />
                 </div>
                 <div>
@@ -138,7 +138,7 @@ export default function SupportPage() {
                     onChange={handleChange}
                     required
                     placeholder="you@example.com"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#FF6B6B] focus:ring-2 focus:ring-[#FF6B6B]/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#E7000B] focus:ring-2 focus:ring-[#E7000B]/20 outline-none transition-all"
                   />
                 </div>
               </div>
@@ -156,13 +156,13 @@ export default function SupportPage() {
                       onClick={() => setFormData((prev) => ({ ...prev, issueType: type.value }))}
                       className={`p-4 rounded-xl border-2 text-left transition-all ${
                         formData.issueType === type.value
-                          ? 'border-[#FF6B6B] bg-red-50'
+                          ? 'border-[#E7000B] bg-red-50'
                           : 'border-gray-200 hover:border-gray-300'
                       }`}
                     >
                       <span className="text-2xl mb-1 block">{type.emoji}</span>
                       <span className={`text-sm font-medium ${
-                        formData.issueType === type.value ? 'text-[#FF6B6B]' : 'text-gray-700'
+                        formData.issueType === type.value ? 'text-[#E7000B]' : 'text-gray-700'
                       }`}>
                         {type.label}
                       </span>
@@ -184,7 +184,7 @@ export default function SupportPage() {
                   onChange={handleChange}
                   required
                   placeholder="Brief summary of your issue"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#FF6B6B] focus:ring-2 focus:ring-[#FF6B6B]/20 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#E7000B] focus:ring-2 focus:ring-[#E7000B]/20 outline-none transition-all"
                 />
               </div>
 
@@ -201,7 +201,7 @@ export default function SupportPage() {
                   required
                   rows={6}
                   placeholder="Please describe your issue or feedback in detail..."
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#FF6B6B] focus:ring-2 focus:ring-[#FF6B6B]/20 outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#E7000B] focus:ring-2 focus:ring-[#E7000B]/20 outline-none transition-all resize-none"
                 />
               </div>
 
@@ -212,7 +212,7 @@ export default function SupportPage() {
                 className={`w-full py-4 rounded-full font-semibold text-lg transition-all ${
                   isSubmitting || !formData.issueType
                     ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                    : 'bg-[#FF6B6B] text-white hover:bg-[#E55555] shadow-lg hover:shadow-xl'
+                    : 'bg-[#E7000B] text-white hover:bg-[#C50009] shadow-lg hover:shadow-xl'
                 }`}
               >
                 {isSubmitting ? (
@@ -236,7 +236,7 @@ export default function SupportPage() {
               </p>
               <a 
                 href="mailto:support@lovebae.app"
-                className="inline-flex items-center text-[#FF6B6B] hover:text-[#E55555] font-medium"
+                className="inline-flex items-center text-[#E7000B] hover:text-[#C50009] font-medium"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

@@ -96,7 +96,7 @@ export default async function Image() {
             style={{
               fontSize: 64,
               fontWeight: 700,
-              color: '#FF6B6B',
+              color: '#E7000B',
             }}
           >
             bae
@@ -157,7 +157,7 @@ export default async function Image() {
             position: 'absolute',
             bottom: 40,
             fontSize: 22,
-            color: '#FF6B6B',
+            color: '#E7000B',
             fontWeight: 600,
           }}
         >

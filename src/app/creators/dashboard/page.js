@@ -88,7 +88,7 @@ export default function CreatorDashboardPage() {
           <div className="max-w-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
             <div className="p-8">
               <div className="flex justify-start mb-6">
-                <Link href="/creators" className="inline-flex items-center text-red-500 hover:text-red-600 transition-colors">
+                <Link href="/creators" className="inline-flex items-center text-[#E7000B] hover:text-[#C50009] transition-colors">
                   <svg className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                   </svg>
@@ -119,14 +119,14 @@ export default function CreatorDashboardPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@email.com"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E7000B] focus:border-transparent"
                   />
                 </div>
                 
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-red-500 text-white py-3 rounded-xl font-semibold hover:bg-red-600 transition-colors disabled:opacity-50"
+                  className="w-full bg-[#E7000B] text-white py-3 rounded-xl font-semibold hover:bg-[#C50009] transition-colors disabled:opacity-50"
                 >
                   {isLoading ? 'Looking up...' : 'Get My Referral Code'}
                 </button>
@@ -134,7 +134,7 @@ export default function CreatorDashboardPage() {
               
               <p className="text-center text-sm text-gray-500 mt-6">
                 Haven't applied yet?{' '}
-                <Link href="/creators/apply" className="text-red-500 hover:underline">
+                <Link href="/creators/apply" className="text-[#E7000B] hover:underline">
                   Apply to join the creator program
                 </Link>
               </p>

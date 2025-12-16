@@ -52,9 +52,9 @@
   --popover: #ffffff; /* oklch(1 0 0) */
   --popover-foreground: #252525; /* oklch(0.145 0 0) */
   
-  /* Red for primary important buttons */
-  --primary: #ef4444; /* oklch(0.627 0.265 25) - Approx. Red-500 */
-  --primary-foreground: #fafafa; /* oklch(0.985 0 0) - Approx. Gray-50 */
+  /* Vibrant red for primary important buttons (matching logo) */
+  --primary: #E7000B;
+  --primary-foreground: #fafafa;
   
   /* Light neutral shade for secondary elements */
   --secondary: #f5f5f5; /* oklch(0.97 0 0) - Approx. Gray-100 */
@@ -75,7 +75,7 @@
   /* Neutral borders and inputs */
   --border: #e6e6e6; /* oklch(0.922 0 0) - Approx. Gray-200 */
   --input: #e6e6e6; /* oklch(0.922 0 0) */
-  --ring: #ef4444; /* oklch(0.627 0.265 25) */
+  --ring: #E7000B;
   
   /* Chart colors with more diverse palette */
   --chart-1: #f97316; /* oklch(0.646 0.222 41.116) - Approx. Orange-500 */
@@ -87,7 +87,7 @@
   /* Sidebar with white theme */
   --sidebar: #fafafa; /* oklch(0.985 0 0) */
   --sidebar-foreground: #252525; /* oklch(0.145 0 0) */
-  --sidebar-primary: #ef4444; /* oklch(0.627 0.265 25) */
+  --sidebar-primary: #E7000B;
   --sidebar-primary-foreground: #fafafa; /* oklch(0.985 0 0) */
   --sidebar-accent: #60a5fa; /* oklch(0.7 0.1 240) */
   --sidebar-accent-foreground: #333333; /* oklch(0.205 0 0) */
@@ -103,9 +103,9 @@
   --popover: #333333; /* oklch(0.205 0 0) */
   --popover-foreground: #fafafa; /* oklch(0.985 0 0) */
   
-  /* Keep primary as red in dark mode */
-  --primary: #f87171; /* oklch(0.704 0.191 22) - Approx. Red-400 */
-  --primary-foreground: #fafafa; /* oklch(0.985 0 0) */
+  /* Vibrant red in dark mode (slightly lighter for visibility) */
+  --primary: #FF4757;
+  --primary-foreground: #fafafa;
   
   /* Dark mode secondary */
   --secondary: #434343; /* oklch(0.269 0 0) - Approx. Gray-700 */
@@ -125,7 +125,7 @@
   /* Dark borders and inputs */
   --border: rgb(255 255 255 / 0.1); /* oklch(1 0 0 / 10%) */
   --input: rgb(255 255 255 / 0.15); /* oklch(1 0 0 / 15%) */
-  --ring: #f87171; /* oklch(0.704 0.191 22) */
+  --ring: #FF4757;
   
   /* Chart colors with diverse palette in dark mode */
   --chart-1: #c084fc; /* oklch(0.488 0.243 264.376) - Approx. Purple-400 */
@@ -137,7 +137,7 @@
   /* Dark sidebar theme */
   --sidebar: #333333; /* oklch(0.205 0 0) */
   --sidebar-foreground: #fafafa; /* oklch(0.985 0 0) */
-  --sidebar-primary: #f87171; /* oklch(0.704 0.191 22) */
+  --sidebar-primary: #FF4757;
   --sidebar-primary-foreground: #fafafa; /* oklch(0.985 0 0) */
   --sidebar-accent: #c084fc; /* oklch(0.5 0.15 270) */
   --sidebar-accent-foreground: #fafafa; /* oklch(0.985 0 0) */

@@ -68,7 +68,7 @@ const QuestionsSection = () => {
                     {type.count}
                   </span>
                 </div>
-                <span className="text-xs font-bold text-[#FF6B6B] bg-white px-2 py-1 rounded-full shadow-sm">
+                <span className="text-xs font-bold text-[#E7000B] bg-white px-2 py-1 rounded-full shadow-sm">
                   {type.points}
                 </span>
               </div>
