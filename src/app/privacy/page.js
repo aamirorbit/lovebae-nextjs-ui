@@ -166,7 +166,21 @@ export default function PrivacyPolicy() {
 
           {/* Section 11 */}
           <h2 className="text-xl font-bold text-[#E53935] mt-8 mb-4 pb-2 border-b-2 border-[#FFCDD2]">
-            11. Contact Us
+            11. Ownership & Operations
+          </h2>
+          <p className="text-gray-600 mb-4">
+            The application "Lovebae" is operated and distributed by Selixa Labs LLC.
+          </p>
+          <p className="text-gray-600 mb-4">
+            All intellectual property rights, including source code, designs, and product concepts related to the application, are owned by Aamir Jawaid. The company operates the application under a license granted by the owner.
+          </p>
+          <p className="text-gray-600 mb-4">
+            The use of a company entity is solely for operational, publishing, and payment processing purposes.
+          </p>
+
+          {/* Section 12 */}
+          <h2 className="text-xl font-bold text-[#E53935] mt-8 mb-4 pb-2 border-b-2 border-[#FFCDD2]">
+            12. Contact Us
           </h2>
           <p className="text-gray-600 mb-2">If you have questions about this Privacy Policy:</p>
           <ul className="list-disc list-inside space-y-2 text-gray-600 mb-4">
