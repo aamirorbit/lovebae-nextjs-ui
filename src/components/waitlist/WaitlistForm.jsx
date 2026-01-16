@@ -47,10 +47,7 @@ export function WaitlistForm() {
   const validateForm = () => {
     const newErrors = {};
     
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-    
+    // Only require email - name is optional
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
@@ -83,7 +80,9 @@ export function WaitlistForm() {
         body: JSON.stringify(formData),
       });
       
-      if (response.ok) {
+      const data = await response.json();
+      
+      if (response.ok || response.status === 200) {
         setIsSuccess(true);
         setFormData({
           name: '',
@@ -91,9 +90,12 @@ export function WaitlistForm() {
           partnerEmail: '',
           source: '',
         });
+      } else if (response.status === 400 && data.message) {
+        // Show friendly validation message
+        setErrors({ submit: data.message });
       } else {
-        const data = await response.json();
-        setErrors({ submit: data.message || 'Something went wrong. Please try again.' });
+        // Only show error for server errors
+        setErrors({ submit: 'Something went wrong. Please try again.' });
       }
     } catch (error) {
       setErrors({ submit: 'Network error. Please try again.' });
@@ -137,7 +139,7 @@ export function WaitlistForm() {
       )}
       
       <FormField>
-        <FormLabel htmlFor="name">Your Name <span className="text-[#E7000B]">*</span></FormLabel>
+        <FormLabel htmlFor="name">Your Name <span className="text-gray-400">(Optional)</span></FormLabel>
         <FormInput
           id="name"
           name="name"

@@ -23,10 +23,10 @@ export const passwordPolicy = {
 // Input validation schemas
 const schemas = {
   waitlist: z.object({
-    name: z.string().min(2).max(100),
-    email: z.string().email().optional(),
-    phone: z.string().min(10).max(15),
-    service: z.string().min(2).max(100)
+    name: z.string().min(2).max(100).optional(),
+    email: z.string().email(),
+    phone: z.string().min(10).max(15).optional(),
+    service: z.string().min(2).max(100).optional()
   }),
   foundingHealer: z.object({
     name: z.string().min(2).max(100),

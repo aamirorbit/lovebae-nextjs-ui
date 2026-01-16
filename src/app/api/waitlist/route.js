@@ -49,15 +49,19 @@ export async function POST(request) {
       timestamp: new Date().toISOString()
     });
     
-    // Validate input
-    const validation = validateInput(data, 'waitlist');
-    if (!validation.success) {
-      logger.warn({
-        action: 'waitlist_entry_validation_failed',
-        errors: validation.error.errors
-      });
+    // Validate input - only require email
+    if (!data.email || !data.email.trim()) {
       return NextResponse.json(
-        { error: 'Invalid input', details: validation.error.errors },
+        { message: 'Please provide an email address' },
+        { status: 400, headers }
+      );
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email.trim())) {
+      return NextResponse.json(
+        { message: 'Please provide a valid email address' },
         { status: 400, headers }
       );
     }
@@ -68,13 +72,17 @@ export async function POST(request) {
     // Connect to MongoDB
     await connectToDatabase();
     
-    // Check for duplicates using the model
-    const existingEntry = await WaitlistEntry.findOne({
-      $or: [
-        { email: sanitizedData.email },
-        { phone: sanitizedData.phone }
-      ]
-    });
+    // Check for duplicates using the model - check email, and phone if provided
+    const duplicateQuery = sanitizedData.phone && sanitizedData.phone.trim()
+      ? {
+          $or: [
+            { email: sanitizedData.email.toLowerCase().trim() },
+            { phone: sanitizedData.phone.trim() }
+          ]
+        }
+      : { email: sanitizedData.email.toLowerCase().trim() };
+    
+    const existingEntry = await WaitlistEntry.findOne(duplicateQuery);
 
     if (existingEntry) {
       logger.warn({
@@ -82,16 +90,30 @@ export async function POST(request) {
         existingEntry
       });
       return NextResponse.json(
-        { error: 'Entry already exists' },
-        { status: 409, headers }
+        { message: 'You are already on the waitlist!' },
+        { status: 200, headers }
       );
     }
 
-    // Create new entry
-    const entry = new WaitlistEntry({
-      ...sanitizedData,
+    // Create new entry - only include fields that are provided
+    const entryData = {
+      email: sanitizedData.email.toLowerCase().trim(),
       status: 'pending'
-    });
+    };
+    
+    if (sanitizedData.name && sanitizedData.name.trim()) {
+      entryData.name = sanitizedData.name.trim();
+    }
+    
+    if (sanitizedData.phone && sanitizedData.phone.trim()) {
+      entryData.phone = sanitizedData.phone.trim();
+    }
+    
+    if (sanitizedData.service && sanitizedData.service.trim()) {
+      entryData.service = sanitizedData.service.trim();
+    }
+    
+    const entry = new WaitlistEntry(entryData);
     await entry.save();
 
     logger.info({

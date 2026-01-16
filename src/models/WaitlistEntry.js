@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 const waitlistEntrySchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Name is required'],
     trim: true
   },
   email: {
@@ -15,12 +14,10 @@ const waitlistEntrySchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    required: [true, 'Phone number is required'],
     trim: true
   },
   service: {
     type: String,
-    required: [true, 'Service is required'],
     enum: ['individual', 'couples', 'crisis', 'groups', 'family', 'teen', 'healing', 'ambassador', 'both'],
     default: 'individual'
   },
@@ -37,7 +34,12 @@ const waitlistEntrySchema = new mongoose.Schema({
   timestamps: true
 });
 
+// Delete the model from cache if it exists to ensure fresh schema
+if (mongoose.models.WaitlistEntry) {
+  delete mongoose.models.WaitlistEntry;
+}
+
 // Create and export the model
-const WaitlistEntry = mongoose.models.WaitlistEntry || mongoose.model('WaitlistEntry', waitlistEntrySchema);
+const WaitlistEntry = mongoose.model('WaitlistEntry', waitlistEntrySchema);
 
 export default WaitlistEntry; 
