@@ -19,9 +19,8 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  alternates: {
-    canonical: 'https://lovebae.app',
-  },
+  // NOTE: Canonical URLs are set per-page in their respective layout.js or page.js files
+  // DO NOT set a global canonical here as it causes SEO issues with duplicate canonicals
   openGraph: {
     title: 'Lovebae - The #1 Couples App for Long Distance & Everyday Love',
     description: 'Stay connected with your partner through mood sharing, love letters, shared activities, and more. The best app for couples in long-distance relationships.',
@@ -50,9 +49,11 @@ export const metadata = {
     },
   },
   verification: {
-    // Add your verification codes here when you have them
+    // IMPORTANT: Add your Google Search Console verification code here
+    // Get it from: https://search.google.com/search-console → Settings → Ownership verification → HTML tag
     // google: 'your-google-verification-code',
     // yandex: 'your-yandex-verification-code',
+    // bing: 'your-bing-verification-code',
   },
   category: 'lifestyle',
 };

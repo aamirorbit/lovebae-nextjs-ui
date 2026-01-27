@@ -1,6 +1,3 @@
-'use client';
-
-import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
@@ -11,6 +8,16 @@ import WidgetsSection from '@/components/home/WidgetsSection';
 import QuestionsSection from '@/components/home/QuestionsSection';
 import BlogSection from '@/components/home/BlogSection';
 import FinalCTA from '@/components/home/FinalCTA';
+
+// SEO Metadata for Homepage
+export const metadata = {
+  alternates: {
+    canonical: 'https://lovebae.app',
+  },
+  openGraph: {
+    url: 'https://lovebae.app',
+  },
+};
 
 export default function Home() {
   return (
