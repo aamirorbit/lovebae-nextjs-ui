@@ -1,6 +1,6 @@
 export default function robots() {
   const baseUrl = 'https://lovebae.app';
-  
+
   return {
     rules: [
       {
@@ -13,10 +13,13 @@ export default function robots() {
           '/login/',
           '/_next/',
           '/private/',
+          '*opengraph-image*',
+          '*twitter-image*',
+          '/opengraph-image',
+          '/twitter-image',
         ],
       },
       {
-        // Googlebot-specific rules for optimal crawling
         userAgent: 'Googlebot',
         allow: '/',
         disallow: [
@@ -24,16 +27,16 @@ export default function robots() {
           '/api/',
           '/creators/dashboard/',
           '/login/',
+          '*opengraph-image*',
+          '*twitter-image*',
         ],
       },
       {
-        // GPTBot and AI crawlers - allow for now but can be blocked if needed
         userAgent: 'GPTBot',
         allow: '/',
         disallow: ['/admin/', '/api/'],
       },
       {
-        // Bing bot
         userAgent: 'Bingbot',
         allow: '/',
         disallow: [
@@ -41,6 +44,8 @@ export default function robots() {
           '/api/',
           '/creators/dashboard/',
           '/login/',
+          '*opengraph-image*',
+          '*twitter-image*',
         ],
       },
     ],

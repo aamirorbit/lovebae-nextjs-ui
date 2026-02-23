@@ -1,37 +1,37 @@
+import createMDX from '@next/mdx';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+
   images: {
-    domains: ['images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+      {
+        protocol: 'http',
+        hostname: '**',
+      }
+    ],
   },
-  
-  // SEO: Ensure consistent URLs without trailing slashes
-  // This prevents redirect chains like /blog → /blog/
+
   trailingSlash: false,
-  
-  // SEO: Generate ETags for better caching
   generateEtags: true,
-  
-  // SEO: Compress responses
   compress: true,
-  
-  // SEO: PoweredBy header removal for cleaner responses
   poweredByHeader: false,
-  
-  // SEO: Redirect www to non-www (or vice versa) - configure in your hosting provider
-  // Vercel handles this automatically, but for other providers, add redirects here:
+
   async redirects() {
     return [
-      // Redirect common URL variations to canonical URLs
-      // Example: Remove .html extensions if any legacy URLs exist
-      // {
-      //   source: '/:path*.html',
-      //   destination: '/:path*',
-      //   permanent: true,
-      // },
+      {
+        source: '/admin/login',
+        destination: '/login/admin',
+        permanent: true,
+      },
     ];
   },
-  
-  // SEO: Security headers that also help with SEO
+
   async headers() {
     return [
       {
@@ -55,7 +55,6 @@ const nextConfig = {
           },
         ],
       },
-      // Cache static assets for better Core Web Vitals
       {
         source: '/assets/:path*',
         headers: [
@@ -74,8 +73,67 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/:path*/opengraph-image',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
+      {
+        source: '/opengraph-image',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
+      {
+        source: '/:path*/twitter-image',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
+      {
+        source: '/twitter-image',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
     ];
+  },
+
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [
+        ...config.externals,
+        ({ request }, callback) => {
+          if (/^mongodb/.test(request)) {
+            return callback(null, `commonjs ${request}`);
+          }
+          callback();
+        },
+      ];
+    }
+    return config;
   },
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
+
+export default withMDX(nextConfig);
