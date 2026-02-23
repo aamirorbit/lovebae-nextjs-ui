@@ -23,7 +23,7 @@ export default async function sitemap() {
       path: '/blog', 
       priority: 0.9, 
       changeFrequency: 'daily',
-      lastModified: '2026-01-27', // Updated with new blog posts
+      lastModified: '2026-02-24', // Updated with new blog posts
     },
     { 
       path: '/support', 
