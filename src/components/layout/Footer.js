@@ -20,6 +20,9 @@ const Footer = () => {
             <Link href="/blog" className="text-gray-600 hover:text-[#E7000B] transition-colors">
               Blog
             </Link>
+            <Link href="/games" className="text-gray-600 hover:text-[#E7000B] transition-colors">
+              Games
+            </Link>
             <Link href="/creators" className="text-gray-600 hover:text-[#E7000B] transition-colors">
               Creators
             </Link>

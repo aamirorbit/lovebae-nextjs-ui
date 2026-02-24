@@ -1,0 +1,895 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is your partner's favorite food?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 2,
+      "question": "What is your partner's middle name?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 3,
+      "question": "What is your partner's favorite color?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 4,
+      "question": "What is your partner's biggest fear?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 5,
+      "question": "What is your partner's go-to comfort movie?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 6,
+      "question": "What is your partner's favorite season?",
+      "category": "basics",
+      "options": ["Spring", "Summer", "Autumn", "Winter"],
+      "type": "multiple"
+    },
+    {
+      "id": 7,
+      "question": "What is your partner's shoe size?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 8,
+      "question": "What genre of music does your partner listen to the most?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 9,
+      "question": "What is your partner's favorite drink to order?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 10,
+      "question": "What is your partner's zodiac sign?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 11,
+      "question": "What does your partner do first thing in the morning?",
+      "category": "habits",
+      "options": ["Check phone", "Stretch", "Make coffee", "Kiss me"],
+      "type": "multiple"
+    },
+    {
+      "id": 12,
+      "question": "How does your partner take their coffee or tea?",
+      "category": "habits",
+      "options": ["Black / plain", "With milk only", "With sugar only", "Milk and sugar"],
+      "type": "multiple"
+    },
+    {
+      "id": 13,
+      "question": "What side of the bed does your partner sleep on?",
+      "category": "habits",
+      "options": ["Left", "Right", "Middle", "Changes every night"],
+      "type": "multiple"
+    },
+    {
+      "id": 14,
+      "question": "How many alarms does your partner set in the morning?",
+      "category": "habits",
+      "options": ["None – natural riser", "Just one", "Two or three", "Five or more"],
+      "type": "multiple"
+    },
+    {
+      "id": 15,
+      "question": "What is your partner's most-used app on their phone?",
+      "category": "habits",
+      "type": "open"
+    },
+    {
+      "id": 16,
+      "question": "Does your partner fold or scrunch toilet paper?",
+      "category": "habits",
+      "options": ["Fold", "Scrunch", "Wrap", "I have no idea"],
+      "type": "multiple"
+    },
+    {
+      "id": 17,
+      "question": "What's your partner's go-to snack at midnight?",
+      "category": "habits",
+      "type": "open"
+    },
+    {
+      "id": 18,
+      "question": "How long does your partner typically take to get ready?",
+      "category": "habits",
+      "options": ["Under 15 minutes", "15–30 minutes", "30–60 minutes", "Over an hour"],
+      "type": "multiple"
+    },
+    {
+      "id": 19,
+      "question": "What does your partner do to relax after a long day?",
+      "category": "habits",
+      "options": ["Watch TV / scroll", "Exercise", "Take a bath", "Talk to me"],
+      "type": "multiple"
+    },
+    {
+      "id": 20,
+      "question": "What's the one chore your partner absolutely hates doing?",
+      "category": "habits",
+      "type": "open"
+    },
+    {
+      "id": 21,
+      "question": "What's your partner's love language?",
+      "category": "preferences",
+      "options": ["Words of affirmation", "Acts of service", "Receiving gifts", "Quality time"],
+      "type": "multiple"
+    },
+    {
+      "id": 22,
+      "question": "What type of vacation does your partner prefer?",
+      "category": "preferences",
+      "options": ["Beach resort", "City exploration", "Mountain adventure", "Staycation"],
+      "type": "multiple"
+    },
+    {
+      "id": 23,
+      "question": "What's your partner's ideal date night?",
+      "category": "preferences",
+      "type": "open"
+    },
+    {
+      "id": 24,
+      "question": "Does your partner prefer sweet or savory food?",
+      "category": "preferences",
+      "options": ["Sweet", "Savory", "Both equally", "Depends on the mood"],
+      "type": "multiple"
+    },
+    {
+      "id": 25,
+      "question": "What kind of weather does your partner enjoy most?",
+      "category": "preferences",
+      "options": ["Sunny and warm", "Rainy and cozy", "Cool and breezy", "Snowy and cold"],
+      "type": "multiple"
+    },
+    {
+      "id": 26,
+      "question": "What's your partner's favorite way to show affection?",
+      "category": "preferences",
+      "type": "open"
+    },
+    {
+      "id": 27,
+      "question": "Would your partner rather cook at home or eat out?",
+      "category": "preferences",
+      "options": ["Cook at home", "Eat out", "Order in", "Depends on the day"],
+      "type": "multiple"
+    },
+    {
+      "id": 28,
+      "question": "What's your partner's go-to karaoke song?",
+      "category": "preferences",
+      "type": "open"
+    },
+    {
+      "id": 29,
+      "question": "Does your partner prefer mornings or nights?",
+      "category": "preferences",
+      "options": ["Early bird", "Night owl", "Afternoon person", "Depends on the day"],
+      "type": "multiple"
+    },
+    {
+      "id": 30,
+      "question": "What genre of movie does your partner pick most often?",
+      "category": "preferences",
+      "options": ["Comedy", "Romance", "Action / thriller", "Horror"],
+      "type": "multiple"
+    },
+    {
+      "id": 31,
+      "question": "Where was your first date?",
+      "category": "memories",
+      "type": "open"
+    },
+    {
+      "id": 32,
+      "question": "What was the first thing your partner said to you?",
+      "category": "memories",
+      "type": "open"
+    },
+    {
+      "id": 33,
+      "question": "What was the first gift your partner gave you?",
+      "category": "memories",
+      "type": "open"
+    },
+    {
+      "id": 34,
+      "question": "What song reminds you of your partner?",
+      "category": "memories",
+      "type": "open"
+    },
+    {
+      "id": 35,
+      "question": "What's the funniest thing that has happened to you both?",
+      "category": "memories",
+      "type": "open"
+    },
+    {
+      "id": 36,
+      "question": "What was your partner wearing when you first met?",
+      "category": "memories",
+      "options": ["Something casual", "Dressed up", "Workout clothes", "I honestly don't remember"],
+      "type": "multiple"
+    },
+    {
+      "id": 37,
+      "question": "Who said 'I love you' first?",
+      "category": "memories",
+      "options": ["I did", "They did", "We said it together", "We haven't said it yet"],
+      "type": "multiple"
+    },
+    {
+      "id": 38,
+      "question": "What's the most thoughtful thing your partner has done for you?",
+      "category": "memories",
+      "type": "open"
+    },
+    {
+      "id": 39,
+      "question": "What trip or adventure together is your partner's favorite?",
+      "category": "memories",
+      "type": "open"
+    },
+    {
+      "id": 40,
+      "question": "What was the first movie you watched together?",
+      "category": "memories",
+      "type": "open"
+    },
+    {
+      "id": 41,
+      "question": "Where does your partner dream of traveling to?",
+      "category": "dreams",
+      "type": "open"
+    },
+    {
+      "id": 42,
+      "question": "What would your partner's dream job be if money wasn't a factor?",
+      "category": "dreams",
+      "type": "open"
+    },
+    {
+      "id": 43,
+      "question": "How many kids does your partner want?",
+      "category": "dreams",
+      "options": ["None", "One", "Two", "Three or more"],
+      "type": "multiple"
+    },
+    {
+      "id": 44,
+      "question": "Where does your partner want to live in 10 years?",
+      "category": "dreams",
+      "type": "open"
+    },
+    {
+      "id": 45,
+      "question": "What's one thing on your partner's bucket list?",
+      "category": "dreams",
+      "type": "open"
+    },
+    {
+      "id": 46,
+      "question": "If your partner won the lottery, what's the first thing they'd buy?",
+      "category": "dreams",
+      "options": ["A house", "A car", "A vacation", "Something for family"],
+      "type": "multiple"
+    },
+    {
+      "id": 47,
+      "question": "What skill does your partner wish they could master overnight?",
+      "category": "dreams",
+      "type": "open"
+    },
+    {
+      "id": 48,
+      "question": "What does your partner want to be remembered for?",
+      "category": "dreams",
+      "type": "open"
+    },
+    {
+      "id": 49,
+      "question": "What kind of home does your partner dream of?",
+      "category": "dreams",
+      "options": ["Cozy cottage", "Modern apartment", "Big family house", "Off-grid cabin"],
+      "type": "multiple"
+    },
+    {
+      "id": 50,
+      "question": "What's your partner's dream retirement plan?",
+      "category": "dreams",
+      "options": ["Travel the world", "Live near the beach", "Start a passion project", "Spend time with grandkids"],
+      "type": "multiple"
+    },
+    {
+      "id": 51,
+      "question": "What is your partner's favorite holiday or celebration?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 52,
+      "question": "What's your partner's guilty pleasure TV show?",
+      "category": "preferences",
+      "type": "open"
+    },
+    {
+      "id": 53,
+      "question": "What habit of yours does your partner find the most endearing?",
+      "category": "habits",
+      "type": "open"
+    },
+    {
+      "id": 54,
+      "question": "What's the most embarrassing thing your partner has told you about their past?",
+      "category": "memories",
+      "type": "open"
+    },
+    {
+      "id": 55,
+      "question": "If your partner could have dinner with anyone, living or dead, who would it be?",
+      "category": "dreams",
+      "type": "open"
+    },
+    {
+      "id": 56,
+      "question": "What does your partner order at a fast food restaurant?",
+      "category": "habits",
+      "type": "open"
+    },
+    {
+      "id": 57,
+      "question": "What's the pet name your partner uses for you the most?",
+      "category": "basics",
+      "type": "open"
+    },
+    {
+      "id": 58,
+      "question": "How does your partner handle stress?",
+      "category": "habits",
+      "options": ["Talks it out", "Goes quiet", "Exercises", "Comfort eats"],
+      "type": "multiple"
+    },
+    {
+      "id": 59,
+      "question": "What's the weirdest food combination your partner enjoys?",
+      "category": "preferences",
+      "type": "open"
+    },
+    {
+      "id": 60,
+      "question": "What's the one thing your partner would save in a fire (besides people and pets)?",
+      "category": "preferences",
+      "options": ["Phone", "Photo album", "A sentimental item", "Important documents"],
+      "type": "multiple"
+    },
+    {
+      "id": 61,
+      "question": "What's your partner's favorite position during sex?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 62,
+      "question": "What turns your partner on the most about you physically?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 63,
+      "question": "What's a secret kink or fantasy your partner has shared with you?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 64,
+      "question": "Where does your partner like to be touched most during foreplay?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 65,
+      "question": "What's your partner's favorite way to be dominated or to dominate?",
+      "category": "intimate",
+      "options": ["I like to be in control", "I like when my partner takes control", "We switch it up", "Neither - we're vanilla"],
+      "type": "multiple"
+    },
+    {
+      "id": 66,
+      "question": "Has your partner ever faked an orgasm? If so, why?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 67,
+      "question": "What's the most adventurous place your partner has had sex?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 68,
+      "question": "Does your partner prefer morning sex or evening sex?",
+      "category": "intimate",
+      "options": ["Morning - energetic start to the day", "Evening - relaxing way to unwind", "Both equally", "Neither - not a morning/evening person"],
+      "type": "multiple"
+    },
+    {
+      "id": 69,
+      "question": "What's your partner's go-to dirty talk phrase?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 70,
+      "question": "How does your partner like to be kissed - soft and gentle or hard and passionate?",
+      "category": "intimate",
+      "options": ["Soft and gentle", "Hard and passionate", "Both depending on the mood", "Other"],
+      "type": "multiple"
+    },
+    {
+      "id": 71,
+      "question": "What's something your partner does in bed that drives you absolutely wild?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 72,
+      "question": "Does your partner like to be vocal during sex or more quiet?",
+      "category": "intimate",
+      "options": ["Very vocal - moans and dirty talk", "Somewhat vocal - occasional sounds", "Quiet but responsive", "Silent"],
+      "type": "multiple"
+    },
+    {
+      "id": 73,
+      "question": "What's your partner's favorite sex toy or accessory?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 74,
+      "question": "How long does your partner typically like foreplay to last?",
+      "category": "intimate",
+      "options": ["Quick and straight to it", "5-15 minutes", "15-30 minutes", "Over 30 minutes - take your time"],
+      "type": "multiple"
+    },
+    {
+      "id": 75,
+      "question": "What's a boundary or limit your partner has in the bedroom?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 76,
+      "question": "Does your partner like to cuddle after sex?",
+      "category": "intimate",
+      "options": ["Absolutely - love the afterglow", "Sometimes, depending on the mood", "Not really - need space", "Prefer to talk or shower"],
+      "type": "multiple"
+    },
+    {
+      "id": 77,
+      "question": "What's the most intense orgasm your partner has ever had with you?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 78,
+      "question": "Does your partner watch porn? If so, what kind?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 79,
+      "question": "What's something new your partner wants to try sexually?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 80,
+      "question": "How does your partner feel about role-playing?",
+      "category": "intimate",
+      "options": ["Love it - very into it", "Open to trying it", "Not interested", "Haven't tried but curious"],
+      "type": "multiple"
+    },
+    {
+      "id": 81,
+      "question": "What's your partner's most sensitive erogenous zone?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 82,
+      "question": "Does your partner prefer to give or receive oral sex?",
+      "category": "intimate",
+      "options": ["Love giving", "Love receiving", "Both equally", "Not a fan of oral"],
+      "type": "multiple"
+    },
+    {
+      "id": 83,
+      "question": "What's the hottest dream your partner has had about you?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 84,
+      "question": "How does your partner feel about trying anal sex?",
+      "category": "intimate",
+      "options": ["Love it", "Curious but haven't tried", "Not interested", "Have tried and it's not for us"],
+      "type": "multiple"
+    },
+    {
+      "id": 85,
+      "question": "What's your partner's favorite way to be teased?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 86,
+      "question": "Does your partner like to be rough or gentle during sex?",
+      "category": "intimate",
+      "options": ["Very rough and intense", "Mix of rough and gentle", "Gentle and loving", "Depends on the mood"],
+      "type": "multiple"
+    },
+    {
+      "id": 87,
+      "question": "What's something your partner has done sexually that surprised you?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 88,
+      "question": "How often does your partner masturbate?",
+      "category": "intimate",
+      "options": ["Daily", "A few times a week", "Once a week", "Rarely or never"],
+      "type": "multiple"
+    },
+    {
+      "id": 89,
+      "question": "What's your partner's ultimate sexual fantasy involving you?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 90,
+      "question": "Does your partner like to use lubrication during sex?",
+      "category": "intimate",
+      "options": ["Always - it's essential", "Sometimes when needed", "Rarely or never", "Depends on the situation"],
+      "type": "multiple"
+    },
+    {
+      "id": 91,
+      "question": "What's the dirtiest thing your partner has ever said to you in bed?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 92,
+      "question": "Does your partner like to be choked or choked during sex?",
+      "category": "intimate",
+      "options": ["Love giving it", "Love receiving it", "Both", "Not interested"],
+      "type": "multiple"
+    },
+    {
+      "id": 93,
+      "question": "What's your partner's favorite position for receiving oral sex?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 94,
+      "question": "Has your partner ever squirted or made you squirt?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 95,
+      "question": "What's the most times you've had sex in one day?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 96,
+      "question": "Does your partner like to use food during sex?",
+      "category": "intimate",
+      "options": ["Love it - very messy fun", "Sometimes for special occasions", "Not really our thing", "Haven't tried but curious"],
+      "type": "multiple"
+    },
+    {
+      "id": 97,
+      "question": "What's your partner's deepest sexual insecurity?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 98,
+      "question": "Does your partner prefer sex with the lights on or off?",
+      "category": "intimate",
+      "options": ["Lights on - want to see everything", "Lights off - more intimate", "Dim lighting", "Doesn't matter"],
+      "type": "multiple"
+    },
+    {
+      "id": 99,
+      "question": "What's the most erotic photo or video your partner has sent you?",
+      "category": "intimate",
+      "type": "open"
+    },
+    {
+      "id": 100,
+      "question": "Does your partner like to be blindfolded during sex?",
+      "category": "intimate",
+      "options": ["Love it - heightens senses", "Sometimes for variety", "Not interested", "Prefer to be the one blindfolding"],
+      "type": "multiple"
+    },
+    {
+      "id": 101,
+      "question": "What's your partner's reaction to trying new sexual positions?",
+      "category": "spicy",
+      "options": ["Excited and adventurous", "Open but prefers familiar", "Not interested in new positions", "Love experimenting"],
+      "type": "multiple"
+    },
+    {
+      "id": 102,
+      "question": "Has your partner ever used a vibrator during sex with you?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 103,
+      "question": "What's the riskiest place your partner has wanted to have sex?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 104,
+      "question": "Does your partner like to role-play in bed?",
+      "category": "spicy",
+      "options": ["Absolutely - favorite thing", "Sometimes for fun", "Not really our style", "Want to try but haven't"],
+      "type": "multiple"
+    },
+    {
+      "id": 105,
+      "question": "What's your partner's favorite scenario for role-playing?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 106,
+      "question": "Has your partner ever tied you up or been tied up during sex?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 107,
+      "question": "What's the most intense sexual experience your partner has had?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 108,
+      "question": "Does your partner like to incorporate temperature play (ice/hot) in sex?",
+      "category": "spicy",
+      "options": ["Love it - very stimulating", "Tried it once", "Not interested", "Curious but haven't tried"],
+      "type": "multiple"
+    },
+    {
+      "id": 109,
+      "question": "What's your partner's opinion on threesomes or group sex?",
+      "category": "spicy",
+      "options": ["Definitely interested", "Curious but hesitant", "Not interested", "Have tried it"],
+      "type": "multiple"
+    },
+    {
+      "id": 110,
+      "question": "Has your partner ever sent you nudes or erotic messages?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 111,
+      "question": "What's the most public place you've almost gotten caught having sex?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 112,
+      "question": "Does your partner like to use mirrors during sex?",
+      "category": "spicy",
+      "options": ["Love watching ourselves", "Sometimes for fun", "Not interested", "Makes me self-conscious"],
+      "type": "multiple"
+    },
+    {
+      "id": 113,
+      "question": "What's your partner's favorite way to be spanked or to spank?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 114,
+      "question": "Has your partner ever used nipple clamps or similar toys?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 115,
+      "question": "What's the longest your partner has gone without sex?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 116,
+      "question": "Does your partner like to watch porn together?",
+      "category": "spicy",
+      "options": ["Love it - turns us both on", "Sometimes for inspiration", "Not interested", "Prefer solo viewing"],
+      "type": "multiple"
+    },
+    {
+      "id": 117,
+      "question": "What's your partner's reaction to dirty talk?",
+      "category": "spicy",
+      "options": ["Love it - very vocal", "Find it hot but shy", "Not interested", "Prefer actions over words"],
+      "type": "multiple"
+    },
+    {
+      "id": 118,
+      "question": "Has your partner ever faked enthusiasm during sex? Why?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 119,
+      "question": "What's the most expensive sex toy your partner has bought?",
+      "category": "spicy",
+      "type": "open"
+    },
+    {
+      "id": 120,
+      "question": "Does your partner like to be bitten during sex?",
+      "category": "spicy",
+      "options": ["Love the marks", "Light biting only", "Not interested", "Prefer to do the biting"],
+      "type": "multiple"
+    },
+    {
+      "id": 121,
+      "question": "What's your partner's ultimate sexual fantasy that involves power dynamics?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 122,
+      "question": "Has your partner ever participated in BDSM activities?",
+      "category": "extreme",
+      "options": ["Very experienced", "Tried some things", "Curious but new", "Not interested"],
+      "type": "multiple"
+    },
+    {
+      "id": 123,
+      "question": "What's the most extreme sexual act your partner has tried?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 124,
+      "question": "Does your partner have any fetishes that involve bodily fluids?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 125,
+      "question": "Has your partner ever used impact play (whips, paddles, etc.)?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 126,
+      "question": "What's your partner's opinion on consensual non-consent role-play?",
+      "category": "extreme",
+      "options": ["Love it - very intense", "Curious but scared", "Not interested", "Have tried it"],
+      "type": "multiple"
+    },
+    {
+      "id": 127,
+      "question": "Has your partner ever tried electro-stimulation or e-stim?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 128,
+      "question": "What's the most taboo sexual fantasy your partner has confessed?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 129,
+      "question": "Does your partner like extreme bondage (suspension, mummification, etc.)?",
+      "category": "extreme",
+      "options": ["Absolutely - love the intensity", "Tried basic bondage", "Not interested", "Curious about extremes"],
+      "type": "multiple"
+    },
+    {
+      "id": 130,
+      "question": "Has your partner ever explored sexual hypnosis or mind control?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 131,
+      "question": "What's your partner's most extreme pain tolerance during sex?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 132,
+      "question": "Does your partner have any interest in sexual objectification?",
+      "category": "extreme",
+      "options": ["Love being objectified", "Love objectifying partner", "Both", "Not interested"],
+      "type": "multiple"
+    },
+    {
+      "id": 133,
+      "question": "Has your partner ever tried fire play or wax play?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 134,
+      "question": "What's the most degrading sexual act your partner enjoys?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 135,
+      "question": "Does your partner like to explore altered states during sex (drugs, hypnosis)?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 136,
+      "question": "Has your partner ever participated in orgies or sex parties?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 137,
+      "question": "What's your partner's most extreme exhibitionist fantasy?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 138,
+      "question": "Does your partner have any interest in sexual cannibalism fantasies?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 139,
+      "question": "Has your partner ever tried extreme sensory deprivation?",
+      "category": "extreme",
+      "type": "open"
+    },
+    {
+      "id": 140,
+      "question": "What's the most violent sexual fantasy your partner has?",
+      "category": "extreme",
+      "type": "open"
+    }
+  ]
+}

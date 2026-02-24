@@ -164,3 +164,79 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* ---- Game UI: iOS-inspired glass & animation utilities ---- */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 2px 16px rgba(0, 0, 0, 0.04),
+    0 8px 40px rgba(231, 0, 11, 0.04);
+}
+
+.glass-card-strong {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.06),
+    0 12px 48px rgba(231, 0, 11, 0.06);
+}
+
+.game-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255, 182, 193, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(255, 200, 200, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 10% 60%, rgba(255, 220, 230, 0.15) 0%, transparent 50%),
+    linear-gradient(180deg, #FFF5F7 0%, #FFFFFF 100%);
+}
+
+.game-glow {
+  box-shadow:
+    0 0 0 1px rgba(231, 0, 11, 0.08),
+    0 4px 20px rgba(231, 0, 11, 0.1),
+    0 8px 40px rgba(231, 0, 11, 0.06);
+}
+
+.btn-press {
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.15s ease;
+}
+.btn-press:active {
+  transform: scale(0.97);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 8px rgba(231, 0, 11, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(231, 0, 11, 0.35); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-fade-in-up { animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-fade-in { animation: fadeIn 0.4s ease both; }
+.animate-scale-in { animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-shimmer { animation: shimmer 2s linear infinite; }
+.animate-pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
+.animate-float { animation: float 3s ease-in-out infinite; }

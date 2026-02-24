@@ -61,6 +61,13 @@ export default async function sitemap() {
       changeFrequency: 'yearly',
       lastModified: '2025-12-15', // Match the date in the page
     },
+    { path: '/games', priority: 0.9, changeFrequency: 'weekly', lastModified: '2026-02-24' },
+    { path: '/games/truth-or-dare', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-02-24' },
+    { path: '/games/would-you-rather', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-02-24' },
+    { path: '/games/never-have-i-ever', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-02-24' },
+    { path: '/games/couple-quiz', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-02-24' },
+    { path: '/games/36-questions', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-02-24' },
+    { path: '/games/love-language-quiz', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-02-24' },
   ].map(route => ({
     url: `${baseUrl}${route.path}`,
     lastModified: new Date(route.lastModified),

@@ -40,6 +40,12 @@ const Header = () => {
               Blog
             </Link>
             <Link 
+              href="/games" 
+              className="text-gray-700 hover:text-[#E7000B] font-medium transition-colors"
+            >
+              Games
+            </Link>
+            <Link 
               href="/creators" 
               className="text-gray-700 hover:text-[#E7000B] font-medium transition-colors"
             >
@@ -92,6 +98,13 @@ const Header = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Blog
+                </Link>
+                <Link 
+                  href="/games"
+                  className="text-2xl font-semibold text-gray-900 hover:text-[#E7000B]"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Games
                 </Link>
                 <Link 
                   href="/creators"

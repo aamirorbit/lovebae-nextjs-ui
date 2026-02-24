@@ -1,0 +1,405 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "scenario": "After a long day, you'd feel most desired if your partner...",
+      "options": [
+        { "text": "Tore your clothes off and fucked you passionately against the wall", "language": "touch" },
+        { "text": "Whispered all the dirty things they want to do to you", "language": "words" },
+        { "text": "Drew you a hot bath with candles and massaged your entire body", "language": "service" },
+        { "text": "Surprised you with sexy lingerie and a bottle of massage oil", "language": "gifts" },
+        { "text": "Devoted the entire evening to pleasuring you however you want", "language": "time" }
+      ]
+    },
+    {
+      "id": 2,
+      "scenario": "For your anniversary, what would make you feel most seduced?",
+      "options": [
+        { "text": "A love letter describing all the ways they want to fuck you", "language": "words" },
+        { "text": "Handcuffs, a blindfold, and their favorite sex toy", "language": "gifts" },
+        { "text": "A full night of uninterrupted, adventurous sex in every room", "language": "time" },
+        { "text": "Them cooking aphrodisiacs and giving you a sensual full-body massage", "language": "service" },
+        { "text": "Slow, teasing foreplay that builds to intense, passionate sex", "language": "touch" }
+      ]
+    },
+    {
+      "id": 3,
+      "scenario": "You're feeling stressed about work. You'd want your partner to...",
+      "options": [
+        { "text": "Rub your shoulders and hold you close", "language": "touch" },
+        { "text": "Tell you they believe in you and that you've got this", "language": "words" },
+        { "text": "Take over household chores so you can focus", "language": "service" },
+        { "text": "Bring you coffee and a little treat to your desk", "language": "gifts" },
+        { "text": "Put their phone away and listen to you vent", "language": "time" }
+      ]
+    },
+    {
+      "id": 4,
+      "scenario": "You and your partner are on a road trip. What makes you happiest?",
+      "options": [
+        { "text": "Them holding your hand while you drive", "language": "touch" },
+        { "text": "Them telling you how much they love traveling with you", "language": "words" },
+        { "text": "Them navigating, packing snacks, and handling logistics", "language": "service" },
+        { "text": "Them surprising you with a stop at a place you've always wanted to visit", "language": "gifts" },
+        { "text": "Having deep conversations together with no distractions", "language": "time" }
+      ]
+    },
+    {
+      "id": 5,
+      "scenario": "After an argument, you'd feel most reassured if your partner...",
+      "options": [
+        { "text": "Pulled you into a warm embrace", "language": "touch" },
+        { "text": "Said 'I'm sorry, I love you, and I'll do better'", "language": "words" },
+        { "text": "Did something kind for you without being asked", "language": "service" },
+        { "text": "Left a small apology note or gift on your pillow", "language": "gifts" },
+        { "text": "Sat down with you to talk things through calmly", "language": "time" }
+      ]
+    },
+    {
+      "id": 6,
+      "scenario": "You just got a promotion at work. You'd love it most if your partner...",
+      "options": [
+        { "text": "Lifted you up and spun you around in excitement", "language": "touch" },
+        { "text": "Told everyone how proud they are of you", "language": "words" },
+        { "text": "Organized a celebration dinner for you", "language": "service" },
+        { "text": "Got you something special to mark the occasion", "language": "gifts" },
+        { "text": "Took the evening off to celebrate with just the two of you", "language": "time" }
+      ]
+    },
+    {
+      "id": 7,
+      "scenario": "On a lazy Sunday morning, you'd feel most aroused if your partner...",
+      "options": [
+        { "text": "Woke you with their mouth between your legs", "language": "touch" },
+        { "text": "Whispered all the filthy things they want to do to you today", "language": "words" },
+        { "text": "Brought you breakfast in bed, then ate you for dessert", "language": "service" },
+        { "text": "Left a trail of rose petals leading to sex toys on the bed", "language": "gifts" },
+        { "text": "Spent the morning exploring your body with no rush to finish", "language": "time" }
+      ]
+    },
+    {
+      "id": 8,
+      "scenario": "You're feeling under the weather. What would comfort you most?",
+      "options": [
+        { "text": "Them snuggling up next to you on the couch", "language": "touch" },
+        { "text": "Hearing them say 'I'll take care of everything, just rest'", "language": "words" },
+        { "text": "Them making you soup and picking up your medicine", "language": "service" },
+        { "text": "Them bringing you a care package with all your comfort items", "language": "gifts" },
+        { "text": "Them staying home to keep you company all day", "language": "time" }
+      ]
+    },
+    {
+      "id": 9,
+      "scenario": "At a party together, you'd feel most loved if your partner...",
+      "options": [
+        { "text": "Kept their arm around you or held your hand", "language": "touch" },
+        { "text": "Introduced you to people with genuine pride and admiration", "language": "words" },
+        { "text": "Made sure you had a drink and were comfortable the whole night", "language": "service" },
+        { "text": "Surprised you by wearing something you'd gifted them", "language": "gifts" },
+        { "text": "Stayed close and checked in with you throughout the evening", "language": "time" }
+      ]
+    },
+    {
+      "id": 10,
+      "scenario": "You're going through a tough personal loss. You'd need your partner to...",
+      "options": [
+        { "text": "Just hold you without saying a word", "language": "touch" },
+        { "text": "Remind you how strong you are and that they're here for you", "language": "words" },
+        { "text": "Handle daily responsibilities so you can grieve in peace", "language": "service" },
+        { "text": "Send you something meaningful — a photo album, a memento", "language": "gifts" },
+        { "text": "Clear their schedule to be by your side", "language": "time" }
+      ]
+    },
+    {
+      "id": 11,
+      "scenario": "You're cooking dinner together. What makes the moment special?",
+      "options": [
+        { "text": "Them wrapping their arms around you from behind while you stir", "language": "touch" },
+        { "text": "Them telling you how amazing the food smells and how talented you are", "language": "words" },
+        { "text": "Them chopping, cleaning, and doing the prep work alongside you", "language": "service" },
+        { "text": "Them picking up a nice bottle of wine or a special ingredient for the meal", "language": "gifts" },
+        { "text": "Putting on music and enjoying the uninterrupted time together", "language": "time" }
+      ]
+    },
+    {
+      "id": 12,
+      "scenario": "Your anniversary is coming up. What would mean the most to you?",
+      "options": [
+        { "text": "A couples' massage or a night of intentional closeness", "language": "touch" },
+        { "text": "A love letter reflecting on your journey together", "language": "words" },
+        { "text": "Them planning the entire anniversary so you don't have to worry", "language": "service" },
+        { "text": "A thoughtful, personalized gift that shows they really know you", "language": "gifts" },
+        { "text": "A weekend getaway with just the two of you", "language": "time" }
+      ]
+    },
+    {
+      "id": 13,
+      "scenario": "You've had a disagreement with a friend. You'd want your partner to...",
+      "options": [
+        { "text": "Comfort you physically — a hand on your back, a long hug", "language": "touch" },
+        { "text": "Validate your feelings and tell you you're not overreacting", "language": "words" },
+        { "text": "Handle something on your to-do list so you have space to process", "language": "service" },
+        { "text": "Bring home your favorite comfort food or a small pick-me-up", "language": "gifts" },
+        { "text": "Sit with you and talk it through over a cup of tea", "language": "time" }
+      ]
+    },
+    {
+      "id": 14,
+      "scenario": "You're meeting your partner after being apart for a week. What do you look forward to most?",
+      "options": [
+        { "text": "Running into their arms for a tight embrace", "language": "touch" },
+        { "text": "Hearing them say how much they missed you", "language": "words" },
+        { "text": "Coming home to a clean house and your favorite meal ready", "language": "service" },
+        { "text": "Them having a little welcome-home surprise waiting for you", "language": "gifts" },
+        { "text": "Spending the first evening catching up on everything", "language": "time" }
+      ]
+    },
+    {
+      "id": 15,
+      "scenario": "You're both stuck at home on a rainy day. You'd love it if your partner...",
+      "options": [
+        { "text": "Pulled you in for a cozy blanket fort and cuddles", "language": "touch" },
+        { "text": "Read you poetry or shared things they love about you", "language": "words" },
+        { "text": "Took care of all the chores so you could fully enjoy the day", "language": "service" },
+        { "text": "Ordered your favorite takeout as a treat", "language": "gifts" },
+        { "text": "Played board games or watched movies together all day", "language": "time" }
+      ]
+    },
+    {
+      "id": 16,
+      "scenario": "You're nervous before a big presentation or interview. You'd feel best if your partner...",
+      "options": [
+        { "text": "Gave you a reassuring kiss and squeezed your hand", "language": "touch" },
+        { "text": "Sent you an encouraging text right before you walked in", "language": "words" },
+        { "text": "Ironed your outfit and packed everything you'd need", "language": "service" },
+        { "text": "Slipped a lucky charm or note into your bag", "language": "gifts" },
+        { "text": "Helped you practice and prepare the night before", "language": "time" }
+      ]
+    },
+    {
+      "id": 17,
+      "scenario": "You notice your partner showing love in everyday moments. Which stands out most?",
+      "options": [
+        { "text": "They always reach for your hand when you walk together", "language": "touch" },
+        { "text": "They leave little notes or texts saying they're thinking of you", "language": "words" },
+        { "text": "They fill up your car with gas or run errands for you", "language": "service" },
+        { "text": "They randomly bring home little things that remind them of you", "language": "gifts" },
+        { "text": "They put their phone down whenever you're talking", "language": "time" }
+      ]
+    },
+    {
+      "id": 18,
+      "scenario": "You're on vacation together in a new city. What makes the trip feel romantic?",
+      "options": [
+        { "text": "Walking arm-in-arm through the streets", "language": "touch" },
+        { "text": "Them saying 'There's no one else I'd rather be here with'", "language": "words" },
+        { "text": "Them researching and planning all the best spots to visit", "language": "service" },
+        { "text": "Them buying you a meaningful souvenir from the trip", "language": "gifts" },
+        { "text": "Getting lost together and savoring every moment", "language": "time" }
+      ]
+    },
+    {
+      "id": 19,
+      "scenario": "You're having a moment of self-doubt. You'd want your partner to...",
+      "options": [
+        { "text": "Hold your face in their hands and look you in the eyes", "language": "touch" },
+        { "text": "List all the reasons they admire and love you", "language": "words" },
+        { "text": "Take something off your plate so you feel less overwhelmed", "language": "service" },
+        { "text": "Give you a journal or book about self-confidence", "language": "gifts" },
+        { "text": "Spend the evening reminding you of all you've accomplished together", "language": "time" }
+      ]
+    },
+    {
+      "id": 20,
+      "scenario": "It's the holidays and you're with each other's families. You'd feel most loved if your partner...",
+      "options": [
+        { "text": "Kept finding small ways to touch you — a hand on your knee, a quick hug", "language": "touch" },
+        { "text": "Told their family wonderful things about you in front of everyone", "language": "words" },
+        { "text": "Helped you prepare dishes or handled stressful family logistics", "language": "service" },
+        { "text": "Gave you a meaningful holiday gift that showed real thought", "language": "gifts" },
+        { "text": "Snuck away with you for a quiet moment together amid the chaos", "language": "time" }
+      ]
+    },
+    {
+      "id": 21,
+      "scenario": "You just moved into a new place together. What would mean the most?",
+      "options": [
+        { "text": "Christening the new space with a long embrace in every room", "language": "touch" },
+        { "text": "Them saying 'I can't wait to build our life here together'", "language": "words" },
+        { "text": "Them assembling furniture and setting everything up for you", "language": "service" },
+        { "text": "Them buying a housewarming gift — art, a plant, something special for the home", "language": "gifts" },
+        { "text": "Spending the first night on the floor together, just talking about the future", "language": "time" }
+      ]
+    },
+    {
+      "id": 22,
+      "scenario": "Your partner forgot something important to you. To make up for it, you'd most appreciate...",
+      "options": [
+        { "text": "Them holding you close and sincerely apologizing", "language": "touch" },
+        { "text": "A genuine, heartfelt apology acknowledging how it made you feel", "language": "words" },
+        { "text": "Them going out of their way to fix the situation", "language": "service" },
+        { "text": "A makeup gift that shows they really do pay attention", "language": "gifts" },
+        { "text": "Them setting aside time to reconnect and make new memories", "language": "time" }
+      ]
+    },
+    {
+      "id": 23,
+      "scenario": "Before bed, what would make you fall asleep feeling most desired?",
+      "options": [
+        { "text": "One last intense fuck before drifting off to sleep", "language": "touch" },
+        { "text": "Them describing their dirtiest dreams about you as a bedtime story", "language": "words" },
+        { "text": "Them tying you up and teasing you until you're begging for release", "language": "service" },
+        { "text": "Finding edible underwear or lubricant waiting for you", "language": "gifts" },
+        { "text": "Extended foreplay that leaves you exhausted and satisfied", "language": "time" }
+      ]
+    },
+    {
+      "id": 24,
+      "scenario": "You accomplished a personal fitness or health goal. You'd love it if your partner...",
+      "options": [
+        { "text": "Picked you up and celebrated with a bear hug", "language": "touch" },
+        { "text": "Told you how inspiring and impressive your dedication is", "language": "words" },
+        { "text": "Made you a healthy celebration meal to support your journey", "language": "service" },
+        { "text": "Got you new gear or equipment related to your goal", "language": "gifts" },
+        { "text": "Joined you for your next workout or activity as a celebration", "language": "time" }
+      ]
+    },
+    {
+      "id": 25,
+      "scenario": "You're feeling disconnected from your partner lately. To reconnect, you'd want them to...",
+      "options": [
+        { "text": "Initiate more physical affection — hugs, kisses, closeness", "language": "touch" },
+        { "text": "Write you a letter about what you mean to them", "language": "words" },
+        { "text": "Lighten your load by taking on more responsibilities at home", "language": "service" },
+        { "text": "Plan a surprise date or give you something thoughtful", "language": "gifts" },
+        { "text": "Set aside a device-free evening to focus on each other", "language": "time" }
+      ]
+    },
+    {
+      "id": 26,
+      "scenario": "You're watching your partner interact with a child or pet. What warms your heart most?",
+      "options": [
+        { "text": "Seeing them being so gentle and physically affectionate", "language": "touch" },
+        { "text": "Hearing them speak sweetly and encouragingly", "language": "words" },
+        { "text": "Watching them patiently help and take care of every need", "language": "service" },
+        { "text": "Seeing them surprise the child or pet with a special toy or treat", "language": "gifts" },
+        { "text": "Watching them give their complete, undivided attention", "language": "time" }
+      ]
+    },
+    {
+      "id": 27,
+      "scenario": "You're stuck in traffic together and running late. You'd feel most at ease if your partner...",
+      "options": [
+        { "text": "Reached over and put a calming hand on your leg", "language": "touch" },
+        { "text": "Joked around and told you it's okay, this is just more time together", "language": "words" },
+        { "text": "Handled calling ahead or rerouting so you could focus on driving", "language": "service" },
+        { "text": "Pulled out a snack they had stashed in their bag for moments like this", "language": "gifts" },
+        { "text": "Turned up the music and made the delay feel like a mini adventure", "language": "time" }
+      ]
+    },
+    {
+      "id": 28,
+      "scenario": "Your partner is leaving for a business trip. What goodbye would mean the most?",
+      "options": [
+        { "text": "A lingering kiss and a tight hug at the door", "language": "touch" },
+        { "text": "A voice message you can replay telling you how much they'll miss you", "language": "words" },
+        { "text": "Them prepping meals for you or setting things up before they leave", "language": "service" },
+        { "text": "Leaving a small gift or surprise for you to find while they're gone", "language": "gifts" },
+        { "text": "Spending the last evening together doing something meaningful", "language": "time" }
+      ]
+    },
+    {
+      "id": 29,
+      "scenario": "You're renovating or redecorating your home. You'd feel most loved if your partner...",
+      "options": [
+        { "text": "Took breaks with you to dance in the empty rooms", "language": "touch" },
+        { "text": "Kept saying how excited they are to create this space with you", "language": "words" },
+        { "text": "Handled the heavy lifting and messy work so you didn't have to", "language": "service" },
+        { "text": "Surprised you with a piece of decor or art you'd been eyeing", "language": "gifts" },
+        { "text": "Spent every free moment working on it together, side by side", "language": "time" }
+      ]
+    },
+    {
+      "id": 30,
+      "scenario": "Looking back on your relationship, what moment would you treasure most?",
+      "options": [
+        { "text": "The time they held you when you needed it most", "language": "touch" },
+        { "text": "The words they said that made you feel truly seen and loved", "language": "words" },
+        { "text": "The time they quietly sacrificed to make your life easier", "language": "service" },
+        { "text": "A gift they gave that showed they understood you deeply", "language": "gifts" },
+        { "text": "A moment where it was just the two of you, fully present", "language": "time" }
+      ]
+    },
+    {
+      "id": 31,
+      "scenario": "During a quiet moment alone, you'd feel most desired if your partner...",
+      "options": [
+        { "text": "Pulled you close and kissed you deeply without saying a word", "language": "touch" },
+        { "text": "Said 'I've been waiting all day to be alone with you'", "language": "words" },
+        { "text": "Dimmed the lights and put on soft music for you", "language": "service" },
+        { "text": "Handed you a glass of your favorite drink they prepared", "language": "gifts" },
+        { "text": "Put away all distractions and focused completely on you", "language": "time" }
+      ]
+    },
+    {
+      "id": 32,
+      "scenario": "When you're both tired after a long day, what would make you feel most connected?",
+      "options": [
+        { "text": "Cuddling close under the covers with gentle touches", "language": "touch" },
+        { "text": "Whispering sweet nothings as you drift off to sleep", "language": "words" },
+        { "text": "Your partner getting you water or adjusting your pillows", "language": "service" },
+        { "text": "Finding a small goodnight treat by your bedside", "language": "gifts" },
+        { "text": "Lying awake a little longer just to talk about your day", "language": "time" }
+      ]
+    },
+    {
+      "id": 33,
+      "scenario": "At a family gathering, you'd feel most loved if your partner...",
+      "options": [
+        { "text": "Kept their hand on your back or held your hand", "language": "touch" },
+        { "text": "Gave you compliments in front of your family", "language": "words" },
+        { "text": "Helped with serving food or cleaning up", "language": "service" },
+        { "text": "Brought a dish your family loves that they made", "language": "gifts" },
+        { "text": "Made sure to spend quality time with your relatives", "language": "time" }
+      ]
+    },
+    {
+      "id": 34,
+      "scenario": "When you achieve something important, you'd want your partner to...",
+      "options": [
+        { "text": "Give you a big celebratory hug and kiss", "language": "touch" },
+        { "text": "Tell you how proud they are with specific reasons", "language": "words" },
+        { "text": "Plan a special dinner or take care of celebrations", "language": "service" },
+        { "text": "Get you something meaningful to commemorate the achievement", "language": "gifts" },
+        { "text": "Take time off work to celebrate with you properly", "language": "time" }
+      ]
+    }
+  ],
+  "languages": {
+    "words": {
+      "name": "Words of Affirmation",
+      "description": "You feel most loved through verbal compliments, encouragement, and expressions of appreciation.",
+      "icon": "💬"
+    },
+    "touch": {
+      "name": "Physical Touch",
+      "description": "You feel most loved through physical closeness — hugs, kisses, hand-holding, and being near your partner.",
+      "icon": "🤗"
+    },
+    "time": {
+      "name": "Quality Time",
+      "description": "You feel most loved when your partner gives you their undivided attention and shares meaningful experiences.",
+      "icon": "⏰"
+    },
+    "gifts": {
+      "name": "Receiving Gifts",
+      "description": "You feel most loved through thoughtful gifts and gestures that show your partner was thinking of you.",
+      "icon": "🎁"
+    },
+    "service": {
+      "name": "Acts of Service",
+      "description": "You feel most loved when your partner helps you with tasks, takes care of things, and eases your burden.",
+      "icon": "🛠️"
+    }
+  }
+}
