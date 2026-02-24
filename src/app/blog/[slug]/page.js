@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
   const { title, description, image, date, author, tags, category } = post.frontmatter;
   
   return {
-    title: `${title} | Lovebae Blog`,
+    title: title,
     description: description,
     keywords: tags ? tags.join(', ') : 'relationship tips, couples advice, Lovebae blog',
     authors: [{ name: author || 'Lovebae Team' }],
