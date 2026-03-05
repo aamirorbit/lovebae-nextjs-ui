@@ -55,6 +55,8 @@ import { SimpleCard } from '@/components/games/GameCard';
 import { ShareableResult } from '@/components/games/ShareableResult';
 import { GameCTA } from '@/components/games/GameCTA';
 import { AgeConsent } from '@/components/games/AgeConsent';
+import GlossaryTooltipText, { ReportDifficultWords } from '@/components/games/GlossaryTooltipText';
+import ShareButtons from '@/components/blog/ShareButtons';
 
 export default function CoupleQuizClient({ data }) {
   const [players, setPlayers] = useState(null);
@@ -132,7 +134,10 @@ export default function CoupleQuizClient({ data }) {
           <div className="text-center mb-10 animate-fade-in-up">
             <span className="text-5xl block mb-4">💕</span>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 tracking-tight">How Well Do You Know Your Partner?</h1>
-            <p className="text-gray-400 text-lg">Answer about each other and see how many you get right.</p>
+            <p className="text-gray-400 text-lg mb-4">Answer about each other and see how many you get right.</p>
+            <div className="flex justify-center">
+              <ShareButtons url="/games/couple-quiz" title="Couple Quiz | Lovebae" />
+            </div>
           </div>
 
           {phase === 'setup' && (
@@ -158,7 +163,11 @@ export default function CoupleQuizClient({ data }) {
               </div>
 
               <SimpleCard className="mt-4">
-                <p className="text-lg md:text-xl font-medium text-gray-900 mb-6 leading-relaxed">{currentQ.question}</p>
+                <p className="text-lg md:text-xl font-medium text-gray-900 mb-2 leading-relaxed">
+                  <GlossaryTooltipText text={currentQ.question} />
+                </p>
+                <ReportDifficultWords context={currentQ.question} />
+                <div className="mb-4" />
 
                 {subPhase === 'p2_guesses' && (
                   <div className="space-y-3">
@@ -170,7 +179,7 @@ export default function CoupleQuizClient({ data }) {
                           onClick={() => handleGuess(opt)}
                           className="block w-full text-left px-5 py-4 rounded-2xl bg-gray-50/80 border-0 hover:bg-[#FFF0F3] hover:shadow-[0_0_0_2px_rgba(231,0,11,0.12)] transition-all duration-300 text-gray-700 font-medium btn-press"
                         >
-                          {opt}
+                          <GlossaryTooltipText text={opt} />
                         </button>
                       ))
                     ) : (
@@ -195,7 +204,7 @@ export default function CoupleQuizClient({ data }) {
                             onClick={() => handleReveal(opt)}
                             className="block w-full text-left px-5 py-4 rounded-2xl bg-gray-50/80 border-0 hover:bg-[#FFF0F3] hover:shadow-[0_0_0_2px_rgba(231,0,11,0.12)] transition-all duration-300 text-gray-700 font-medium btn-press"
                           >
-                            {opt}
+                            <GlossaryTooltipText text={opt} />
                           </button>
                         ))
                       ) : (

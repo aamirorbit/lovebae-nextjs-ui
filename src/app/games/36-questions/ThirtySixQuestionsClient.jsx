@@ -3,11 +3,13 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Header from '@/components/layout/Header';
+import ShareButtons from '@/components/blog/ShareButtons';
 import Footer from '@/components/layout/Footer';
 import { ProgressBar } from '@/components/games/ProgressBar';
 import { SimpleCard } from '@/components/games/GameCard';
 import { GameCTA } from '@/components/games/GameCTA';
 import { AgeConsent } from '@/components/games/AgeConsent';
+import GlossaryTooltipText, { ReportDifficultWords } from '@/components/games/GlossaryTooltipText';
 
 export default function ThirtySixQuestionsClient({ data }) {
   const [currentSetIndex, setSetIndex] = useState(0);
@@ -46,7 +48,10 @@ export default function ThirtySixQuestionsClient({ data }) {
           <div className="text-center mb-10 animate-fade-in-up">
             <span className="text-5xl block mb-4">❤️‍🔥</span>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 tracking-tight">36 Questions to Fall in Love</h1>
-            <p className="text-gray-400 text-lg">Based on the famous Arthur Aron study</p>
+            <p className="text-gray-400 text-lg mb-4">Based on the famous Arthur Aron study</p>
+            <div className="flex justify-center">
+              <ShareButtons url="/games/36-questions" title="36 Questions to Fall in Love | Lovebae" />
+            </div>
           </div>
 
           {!started ? (
@@ -77,7 +82,11 @@ export default function ThirtySixQuestionsClient({ data }) {
 
               {currentQ && (
                 <SimpleCard className="mt-4">
-                  <p className="text-xl md:text-2xl font-medium text-gray-900 leading-relaxed mb-8">{currentQ}</p>
+                  <p className="text-xl md:text-2xl font-medium text-gray-900 leading-relaxed mb-2">
+                    <GlossaryTooltipText text={currentQ} />
+                  </p>
+                  <ReportDifficultWords context={currentQ} />
+                  <div className="mb-6" />
                   <button
                     onClick={handleNext}
                     className="px-10 py-4 rounded-full font-semibold text-white text-base bg-gradient-to-r from-[#E7000B] to-[#FF4757] shadow-[0_4px_20px_rgba(231,0,11,0.3)] btn-press transition-all duration-300"

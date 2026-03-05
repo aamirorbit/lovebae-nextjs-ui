@@ -1,4 +1,4 @@
-import { getAllPosts } from '@/lib/blog';
+import { getAllPosts, getTopicSlugs } from '@/lib/blog';
 
 export default async function sitemap() {
   const baseUrl = 'https://lovebae.app';
@@ -23,8 +23,9 @@ export default async function sitemap() {
       path: '/blog', 
       priority: 0.9, 
       changeFrequency: 'daily',
-      lastModified: '2026-02-24', // Updated with new blog posts
+      lastModified: '2026-02-24',
     },
+    { path: '/success-stories', priority: 0.8, changeFrequency: 'weekly', lastModified: '2026-02-25' },
     { 
       path: '/support', 
       priority: 0.7, 
@@ -86,12 +87,25 @@ export default async function sitemap() {
   const blogRoutes = posts.map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.frontmatter.date || '2025-12-01'),
-    changeFrequency: 'monthly', // Blog posts don't change as frequently after publishing
+    changeFrequency: 'monthly',
     priority: post.frontmatter.featured ? 0.8 : 0.7,
   }));
 
-  // Combine and sort by priority for cleaner sitemap
-  const allRoutes = [...staticRoutes, ...blogRoutes].sort((a, b) => b.priority - a.priority);
+  // Topic hub pages
+  let topicSlugs = [];
+  try {
+    topicSlugs = getTopicSlugs();
+  } catch (e) {
+    // ignore
+  }
+  const topicRoutes = topicSlugs.map(slug => ({
+    url: `${baseUrl}/topics/${slug}`,
+    lastModified: new Date('2026-02-25'),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+
+  const allRoutes = [...staticRoutes, ...blogRoutes, ...topicRoutes].sort((a, b) => b.priority - a.priority);
 
   return allRoutes;
 }

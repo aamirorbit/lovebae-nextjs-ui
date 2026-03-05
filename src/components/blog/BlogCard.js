@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Category to emoji/color mapping
 const categoryConfig = {
@@ -11,13 +12,14 @@ const categoryConfig = {
   'Date Ideas': { emoji: '🏠', color: 'from-amber-100 to-orange-100' },
   'Relationship Tips': { emoji: '✨', color: 'from-rose-100 to-pink-100' },
   'Communication': { emoji: '💭', color: 'from-green-100 to-emerald-100' },
+  'Long Distance': { emoji: '💕', color: 'from-purple-100 to-rose-100' },
 };
 
 const defaultConfig = { emoji: '❤️', color: 'from-red-100 to-pink-100' };
 
 export default function BlogCard({ post }) {
   const { slug, frontmatter, readingTime } = post;
-  const { title, description, category, date, featured } = frontmatter;
+  const { title, description, category, date, featured, image } = frontmatter;
   
   const config = categoryConfig[category] || defaultConfig;
   
@@ -43,11 +45,21 @@ export default function BlogCard({ post }) {
         </div>
       )}
       
-      {/* Article image placeholder */}
-      <div className={`h-48 bg-gradient-to-br ${config.color} flex items-center justify-center`}>
-        <span className="text-7xl group-hover:scale-110 transition-transform duration-300">
-          {config.emoji}
-        </span>
+      {/* Article image or gradient placeholder */}
+      <div className={`relative h-48 bg-gradient-to-br ${config.color} flex items-center justify-center overflow-hidden`}>
+        {image ? (
+          <Image
+            src={image}
+            alt=""
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        ) : (
+          <span className="text-7xl group-hover:scale-110 transition-transform duration-300">
+            {config.emoji}
+          </span>
+        )}
       </div>
       
       <div className="p-6">

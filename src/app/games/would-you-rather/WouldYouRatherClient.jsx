@@ -3,11 +3,13 @@
 import { useState, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import Header from '@/components/layout/Header';
+import ShareButtons from '@/components/blog/ShareButtons';
 import Footer from '@/components/layout/Footer';
 import { SimpleCard } from '@/components/games/GameCard';
 import { ProgressBar } from '@/components/games/ProgressBar';
 import { GameCTA } from '@/components/games/GameCTA';
 import { AgeConsent } from '@/components/games/AgeConsent';
+import GlossaryTooltipText, { ReportDifficultWords } from '@/components/games/GlossaryTooltipText';
 
 const CATEGORIES = [
   { id: 'romantic', label: 'Romantic', emoji: '💕' },
@@ -80,7 +82,10 @@ export default function WouldYouRatherClient({ data }) {
           <div className="text-center mb-8 animate-fade-in-up">
             <span className="text-5xl block mb-4">🤔</span>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 tracking-tight">Would You Rather</h1>
-            <p className="text-gray-400 text-lg mb-6">Couples Edition</p>
+            <p className="text-gray-400 text-lg mb-4">Couples Edition</p>
+            <div className="mb-4 flex justify-center">
+              <ShareButtons url="/games/would-you-rather" title="Would You Rather for Couples | Lovebae" />
+            </div>
 
             {/* iOS-style segmented control */}
             <div className="inline-flex items-center p-1 rounded-full bg-gray-100/80 backdrop-blur-sm gap-0.5">
@@ -120,7 +125,9 @@ export default function WouldYouRatherClient({ data }) {
                       : 'glass-card-strong hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]'
                   }`}
                 >
-                  <p className="text-lg font-medium text-gray-900 leading-relaxed">{current.a}</p>
+                  <p className="text-lg font-medium text-gray-900 leading-relaxed">
+                    <GlossaryTooltipText text={current.a} />
+                  </p>
                   {showResult && totalVotes > 0 && (
                     <div className="mt-3">
                       <div className="flex items-center gap-3">
@@ -148,7 +155,9 @@ export default function WouldYouRatherClient({ data }) {
                       : 'glass-card-strong hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]'
                   }`}
                 >
-                  <p className="text-lg font-medium text-gray-900 leading-relaxed">{current.b}</p>
+                  <p className="text-lg font-medium text-gray-900 leading-relaxed">
+                    <GlossaryTooltipText text={current.b} />
+                  </p>
                   {showResult && totalVotes > 0 && (
                     <div className="mt-3">
                       <div className="flex items-center gap-3">
@@ -161,6 +170,8 @@ export default function WouldYouRatherClient({ data }) {
                   )}
                 </button>
               </div>
+
+              <ReportDifficultWords context={`${current.a} / ${current.b}`} />
 
               {showResult && (
                 <div className="mt-10 flex justify-center animate-fade-in-up">

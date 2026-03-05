@@ -99,6 +99,39 @@ export function getPostsByCategory(category) {
   );
 }
 
+/** Topic slug to category name (for content hub URLs) */
+export const TOPIC_SLUG_TO_CATEGORY = {
+  'long-distance': 'Long Distance',
+  'date-ideas': 'Date Ideas',
+  'relationship-tips': 'Relationship Tips',
+  'communication': 'Communication',
+  'gifts': 'Gifts',
+  'questions': 'Questions',
+  'travel': 'Travel',
+};
+
+/** Category name to topic slug */
+export const CATEGORY_TO_TOPIC_SLUG = Object.fromEntries(
+  Object.entries(TOPIC_SLUG_TO_CATEGORY).map(([slug, cat]) => [cat, slug])
+);
+
+/**
+ * Get all topic slugs that have at least one post
+ */
+export function getTopicSlugs() {
+  const categories = getAllCategories();
+  return categories
+    .map((cat) => CATEGORY_TO_TOPIC_SLUG[cat])
+    .filter(Boolean);
+}
+
+/**
+ * Get category display name from topic slug
+ */
+export function getCategoryByTopicSlug(slug) {
+  return TOPIC_SLUG_TO_CATEGORY[slug] || null;
+}
+
 /**
  * Search posts by title and description
  */

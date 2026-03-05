@@ -3,6 +3,8 @@ import Script from 'next/script';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { GameCTA } from '@/components/games/GameCTA';
+import GamesVideoSection from '@/components/games/GamesVideoSection';
+import ShareButtons from '@/components/blog/ShareButtons';
 
 export const metadata = {
   title: 'Free Couple Games Online — Play With Your Partner Now',
@@ -257,6 +259,13 @@ export default function GamesPage() {
               Truth or Dare, Would You Rather, compatibility quizzes, and more —
               instantly.
             </p>
+            <div className="mt-6 flex justify-center">
+              <ShareButtons
+                url="/games"
+                title="Free Couple Games Online — Play With Your Partner | Lovebae"
+                description="Truth or Dare, Would You Rather, Never Have I Ever, compatibility quizzes & more. Free, instant, no signup."
+              />
+            </div>
           </div>
         </div>
 
@@ -339,6 +348,9 @@ export default function GamesPage() {
             </div>
           </div>
         </section>
+
+        {/* Video: How it works (optional, set NEXT_PUBLIC_GAMES_VIDEO_ID) */}
+        <GamesVideoSection youtubeId={process.env.NEXT_PUBLIC_GAMES_VIDEO_ID} />
 
         {/* Why Couples Love These Games — SEO content */}
         <section className="py-16">

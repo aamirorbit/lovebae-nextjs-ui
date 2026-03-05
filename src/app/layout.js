@@ -1,6 +1,7 @@
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
+import WebVitalsReporter from '@/components/analytics/WebVitalsReporter';
 
 export const metadata = {
   title: {
@@ -49,11 +50,15 @@ export const metadata = {
     },
   },
   verification: {
-    // IMPORTANT: Add your Google Search Console verification code here
-    // Get it from: https://search.google.com/search-console → Settings → Ownership verification → HTML tag
-    // google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
-    // bing: 'your-bing-verification-code',
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    }),
+    ...(process.env.NEXT_PUBLIC_YANDEX_VERIFICATION && {
+      yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+    }),
+    ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION && {
+      other: { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION },
+    }),
   },
   category: 'lifestyle',
 };
@@ -64,6 +69,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning>
         {children}
         <SpeedInsights />
+        <WebVitalsReporter />
         
         {/* JSON-LD structured data - Organization */}
         <Script
@@ -146,26 +152,31 @@ export default function RootLayout({ children }) {
           }}
         />
         
-        {/* Google Analytics - Replace with your GA ID */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX', { 
-                page_path: window.location.pathname,
-                'anonymize_ip': true
-              });
-            `
-          }}
-        />
+        {/* Google Analytics - only loads when NEXT_PUBLIC_GA_MEASUREMENT_ID is set */}
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID &&
+         process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX' && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', { 
+                    page_path: window.location.pathname,
+                    anonymize_ip: true
+                  });
+                `
+              }}
+            />
+          </>
+        )}
       </body>
     </html>
   );

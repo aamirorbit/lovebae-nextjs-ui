@@ -13,7 +13,7 @@ export function GameCard({ front, back, flipped: controlledFlipped, onFlip }) {
 
   return (
     <div
-      className="w-full max-w-lg mx-auto cursor-pointer btn-press"
+      className="relative z-30 w-full max-w-lg mx-auto cursor-pointer btn-press"
       style={{ perspective: '1200px' }}
       onClick={toggle}
       role="button"
@@ -57,7 +57,7 @@ export function GameCard({ front, back, flipped: controlledFlipped, onFlip }) {
 export function SimpleCard({ children, className }) {
   return (
     <div className={cn(
-      'rounded-3xl p-8 text-center glass-card-strong animate-scale-in',
+      'relative z-20 rounded-3xl p-8 text-center glass-card-strong animate-scale-in',
       className
     )}>
       {children}

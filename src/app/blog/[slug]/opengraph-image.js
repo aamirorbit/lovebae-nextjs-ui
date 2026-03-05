@@ -32,15 +32,30 @@ const categoryColors = {
   'Long Distance': '#E879F9',
 };
 
+const metadataBase = process.env.NEXT_PUBLIC_APP_URL || 'https://lovebae.app';
+
 export default async function Image({ params }) {
   const resolvedParams = await params;
   const post = getPostBySlug(resolvedParams.slug);
-  
+
   const title = post?.frontmatter?.title || 'Lovebae Blog';
   const category = post?.frontmatter?.category || 'Blog';
   const emoji = categoryEmojis[category] || '❤️';
   const accentColor = categoryColors[category] || '#E7000B';
-  
+  const imagePath = post?.frontmatter?.image;
+  const rawImageUrl = imagePath
+    ? `${metadataBase.replace(/\/$/, '')}${imagePath.startsWith('/') ? imagePath : `/${imagePath}`}`
+    : null;
+  let imageUrl = null;
+  if (rawImageUrl) {
+    try {
+      const res = await fetch(rawImageUrl, { cache: 'force-cache' });
+      if (res.ok) imageUrl = rawImageUrl;
+    } catch {
+      // fall back to gradient-only
+    }
+  }
+
   return new ImageResponse(
     (
       <div
@@ -49,11 +64,47 @@ export default async function Image({ params }) {
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
-          background: 'linear-gradient(135deg, #FFF0F5 0%, #FFFFFF 50%, #FFF5F8 100%)',
+          background: imageUrl
+            ? '#1a1a1a'
+            : 'linear-gradient(135deg, #FFF0F5 0%, #FFFFFF 50%, #FFF5F8 100%)',
           position: 'relative',
           padding: 60,
         }}
       >
+        {/* Optional featured image from frontmatter - real image for OG */}
+        {imageUrl && (
+          <>
+            <img
+              src={imageUrl}
+              width={1200}
+              height={630}
+              style={{
+                position: 'absolute',
+                inset: 0,
+                objectFit: 'cover',
+                width: '100%',
+                height: '100%',
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.6) 100%)',
+              }}
+            />
+          </>
+        )}
+        {/* Content layer */}
+        <div
+          style={{
+            position: 'relative',
+            height: '100%',
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
         {/* Decorative accent bar */}
         <div
           style={{
@@ -65,20 +116,21 @@ export default async function Image({ params }) {
             background: accentColor,
           }}
         />
-        
-        {/* Decorative circle */}
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '-150px',
-            right: '-150px',
-            width: '500px',
-            height: '500px',
-            borderRadius: '50%',
-            background: `${accentColor}15`,
-            filter: 'blur(80px)',
-          }}
-        />
+
+        {!imageUrl && (
+          <div
+            style={{
+              position: 'absolute',
+              bottom: '-150px',
+              right: '-150px',
+              width: '500px',
+              height: '500px',
+              borderRadius: '50%',
+              background: `${accentColor}15`,
+              filter: 'blur(80px)',
+            }}
+          />
+        )}
         
         {/* Top section: Category badge */}
         <div
@@ -93,7 +145,7 @@ export default async function Image({ params }) {
           <span
             style={{
               fontSize: 24,
-              color: accentColor,
+              color: imageUrl ? '#fff' : accentColor,
               fontWeight: 600,
               textTransform: 'uppercase',
               letterSpacing: 2,
@@ -102,7 +154,7 @@ export default async function Image({ params }) {
             {category}
           </span>
         </div>
-        
+
         {/* Title */}
         <div
           style={{
@@ -115,7 +167,7 @@ export default async function Image({ params }) {
             style={{
               fontSize: title.length > 60 ? 48 : 56,
               fontWeight: 700,
-              color: '#1a1a1a',
+              color: imageUrl ? '#ffffff' : '#1a1a1a',
               lineHeight: 1.2,
               maxWidth: '90%',
             }}
@@ -123,7 +175,7 @@ export default async function Image({ params }) {
             {title}
           </div>
         </div>
-        
+
         {/* Bottom section: Branding */}
         <div
           style={{
@@ -133,17 +185,12 @@ export default async function Image({ params }) {
             marginTop: 'auto',
           }}
         >
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
+          <div style={{ display: 'flex', alignItems: 'center' }}>
             <span
               style={{
                 fontSize: 32,
                 fontWeight: 700,
-                color: '#1a1a1a',
+                color: imageUrl ? '#fff' : '#1a1a1a',
               }}
             >
               Love
@@ -160,22 +207,22 @@ export default async function Image({ params }) {
             <span
               style={{
                 fontSize: 24,
-                color: '#999',
+                color: imageUrl ? 'rgba(255,255,255,0.9)' : '#999',
                 marginLeft: 16,
               }}
             >
               Blog
             </span>
           </div>
-          
           <div
             style={{
               fontSize: 20,
-              color: '#666',
+              color: imageUrl ? 'rgba(255,255,255,0.8)' : '#666',
             }}
           >
             lovebae.app/blog
           </div>
+        </div>
         </div>
       </div>
     ),

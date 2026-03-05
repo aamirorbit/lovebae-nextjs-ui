@@ -10,6 +10,8 @@ import { PlayerSetup } from '@/components/games/PlayerSetup';
 import { SimpleCard } from '@/components/games/GameCard';
 import { GameCTA } from '@/components/games/GameCTA';
 import { AgeConsent } from '@/components/games/AgeConsent';
+import GlossaryTooltipText, { ReportDifficultWords } from '@/components/games/GlossaryTooltipText';
+import ShareButtons from '@/components/blog/ShareButtons';
 
 function pickRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -57,7 +59,10 @@ export default function TruthOrDareClient({ data }) {
               <div className="text-center">
                 <span className="text-5xl block mb-4">🎯</span>
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 tracking-tight">Truth or Dare</h1>
-                <p className="text-gray-400 text-lg">Pick your vibe</p>
+                <p className="text-gray-400 text-lg mb-4">Pick your vibe</p>
+                <div className="flex justify-center">
+                  <ShareButtons url="/games/truth-or-dare" title="Truth or Dare for Couples | Lovebae" />
+                </div>
               </div>
               <IntensitySelector value={level} onChange={setLevel} />
               <div className="flex justify-center">
@@ -124,7 +129,10 @@ export default function TruthOrDareClient({ data }) {
                         {resultType}
                       </span>
                     </div>
-                    <p className="text-xl md:text-2xl text-gray-900 leading-relaxed font-medium">{currentPrompt}</p>
+                    <p className="text-xl md:text-2xl text-gray-900 leading-relaxed font-medium">
+                      <GlossaryTooltipText text={currentPrompt} />
+                    </p>
+                    <ReportDifficultWords context={currentPrompt} />
                   </SimpleCard>
 
                   <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">

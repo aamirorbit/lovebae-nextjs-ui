@@ -3,12 +3,14 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Header from '@/components/layout/Header';
+import ShareButtons from '@/components/blog/ShareButtons';
 import Footer from '@/components/layout/Footer';
 import { ProgressBar } from '@/components/games/ProgressBar';
 import { SimpleCard } from '@/components/games/GameCard';
 import { ShareableResult } from '@/components/games/ShareableResult';
 import { GameCTA } from '@/components/games/GameCTA';
 import { AgeConsent } from '@/components/games/AgeConsent';
+import GlossaryTooltipText, { ReportDifficultWords } from '@/components/games/GlossaryTooltipText';
 
 export default function LoveLanguageQuizClient({ data }) {
   const [index, setIndex] = useState(0);
@@ -60,15 +62,21 @@ export default function LoveLanguageQuizClient({ data }) {
           <div className="text-center mb-10 animate-fade-in-up">
             <span className="text-5xl block mb-4">💝</span>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 tracking-tight">Love Language Quiz</h1>
-            <p className="text-gray-400 text-lg">Discover how you give and receive love</p>
+            <p className="text-gray-400 text-lg mb-4">Discover how you give and receive love</p>
+            <div className="flex justify-center">
+              <ShareButtons url="/games/love-language-quiz" title="Love Language Quiz | Lovebae" />
+            </div>
           </div>
 
           {!done && currentQ && (
             <div className="animate-fade-in">
               <ProgressBar current={index + 1} total={questions.length} />
               <SimpleCard className="mt-6">
-                <p className="text-lg md:text-xl font-medium text-gray-900 mb-6 leading-relaxed">{currentQ.scenario}</p>
-                <div className="space-y-3">
+                <p className="text-lg md:text-xl font-medium text-gray-900 mb-2 leading-relaxed">
+                  <GlossaryTooltipText text={currentQ.scenario} />
+                </p>
+                <ReportDifficultWords context={currentQ.scenario} />
+                <div className="mt-4 space-y-3">
                   {currentQ.options.map((opt) => (
                     <button
                       key={opt.language}
@@ -76,7 +84,7 @@ export default function LoveLanguageQuizClient({ data }) {
                       onClick={() => handleChoose(opt.language)}
                       className="block w-full text-left px-5 py-4 rounded-2xl bg-gray-50/80 border-0 hover:bg-[#FFF0F3] hover:shadow-[0_0_0_2px_rgba(231,0,11,0.12)] transition-all duration-300 text-gray-700 font-medium btn-press"
                     >
-                      {opt.text}
+                      <GlossaryTooltipText text={opt.text} />
                     </button>
                   ))}
                 </div>

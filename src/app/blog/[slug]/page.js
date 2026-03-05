@@ -1,10 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import BlogCard from '@/components/blog/BlogCard';
+import ShareButtons from '@/components/blog/ShareButtons';
+import ShareableSnippets from '@/components/blog/ShareableSnippets';
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/lib/blog';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 
@@ -104,6 +107,19 @@ const components = {
       {children}
     </a>
   ),
+  img: ({ src, alt }) =>
+    src ? (
+      <span className="block my-6 rounded-xl overflow-hidden border border-gray-100">
+        <Image
+          src={src}
+          alt={alt || ''}
+          width={800}
+          height={450}
+          className="w-full h-auto object-cover"
+          sizes="(max-width: 768px) 100vw, 800px"
+        />
+      </span>
+    ) : null,
   strong: ({ children }) => (
     <strong className="font-semibold text-gray-900">{children}</strong>
   ),
@@ -134,6 +150,17 @@ export default async function BlogPostPage({ params }) {
         year: 'numeric' 
       })
     : '';
+
+  const canonicalUrl = `https://lovebae.app/blog/${resolvedParams.slug}`;
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lovebae.app' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://lovebae.app/blog' },
+      { '@type': 'ListItem', position: 3, name: title, item: canonicalUrl },
+    ],
+  };
 
   // JSON-LD structured data for blog post
   const jsonLd = {
@@ -172,6 +199,11 @@ export default async function BlogPostPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Script
+        id="blog-post-breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -203,12 +235,15 @@ export default async function BlogPostPage({ params }) {
               </h1>
               
               {/* Meta */}
-              <div className="flex items-center justify-center gap-4 text-sm text-gray-600">
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600">
                 {author && <span>By {author}</span>}
                 {author && formattedDate && <span>•</span>}
                 {formattedDate && <span>{formattedDate}</span>}
                 <span>•</span>
                 <span>{post.readingTime}</span>
+              </div>
+              <div className="mt-4 flex justify-center">
+                <ShareButtons url={`/blog/${resolvedParams.slug}`} title={title} description={post.frontmatter.description} />
               </div>
             </div>
           </div>
@@ -238,6 +273,17 @@ export default async function BlogPostPage({ params }) {
             </div>
           </div>
         )}
+
+        {/* Content repurposing: copy-for-social snippets */}
+        {/* <div className="container mx-auto px-4 pb-12">
+          <div className="max-w-3xl mx-auto">
+            <ShareableSnippets
+              url={`/blog/${resolvedParams.slug}`}
+              title={title}
+              description={post.frontmatter.description}
+            />
+          </div>
+        </div> */}
         
         {/* CTA Section */}
         <div className="bg-gradient-to-br from-[#E7000B] to-[#C50009] py-12">

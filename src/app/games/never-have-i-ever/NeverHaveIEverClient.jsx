@@ -8,6 +8,8 @@ import { GameCard } from '@/components/games/GameCard';
 import { ModeSelector } from '@/components/games/IntensitySelector';
 import { GameCTA } from '@/components/games/GameCTA';
 import { AgeConsent } from '@/components/games/AgeConsent';
+import GlossaryTooltipText, { ReportDifficultWords } from '@/components/games/GlossaryTooltipText';
+import ShareButtons from '@/components/blog/ShareButtons';
 
 const MODES = [
   { id: 'clean', label: 'Clean Fun', emoji: '😊', desc: 'Wholesome & silly' },
@@ -65,7 +67,10 @@ export default function NeverHaveIEverClient({ data }) {
           <div className="text-center mb-10 animate-fade-in-up">
             <span className="text-5xl block mb-4">🙈</span>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 tracking-tight">Never Have I Ever</h1>
-            <p className="text-gray-400 text-lg">Couples Edition</p>
+            <p className="text-gray-400 text-lg mb-4">Couples Edition</p>
+            <div className="flex justify-center">
+              <ShareButtons url="/games/never-have-i-ever" title="Never Have I Ever for Couples | Lovebae" />
+            </div>
           </div>
 
           {!started ? (
@@ -106,12 +111,16 @@ export default function NeverHaveIEverClient({ data }) {
                     </div>
                   }
                   back={
-                    <p className="text-xl md:text-2xl font-medium text-gray-900 leading-relaxed">{statement}</p>
+                    <p className="text-xl md:text-2xl font-medium text-gray-900 leading-relaxed">
+                      <GlossaryTooltipText text={statement} />
+                    </p>
                   }
                   flipped={flipped}
                   onFlip={setFlipped}
                 />
               )}
+
+              {statement && <ReportDifficultWords context={statement} />}
 
               <div className="mt-10 space-y-4">
                 <div className="flex gap-3 justify-center">

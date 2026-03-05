@@ -1,4 +1,6 @@
 import React, { Suspense } from 'react';
+import Link from 'next/link';
+import Script from 'next/script';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import BlogCard from '@/components/blog/BlogCard';
@@ -100,6 +102,15 @@ function BlogList({ query, category }) {
   );
 }
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lovebae.app' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://lovebae.app/blog' },
+  ],
+};
+
 export default async function BlogPage({ searchParams }) {
   // Await searchParams in Next.js 15
   const resolvedParams = await searchParams;
@@ -108,6 +119,11 @@ export default async function BlogPage({ searchParams }) {
 
   return (
     <>
+      <Script
+        id="blog-breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -124,6 +140,26 @@ export default async function BlogPage({ searchParams }) {
           </div>
         </div>
         
+        {/* Topic hubs - internal linking for SEO */}
+        <div className="container mx-auto px-4 py-6 max-w-6xl mx-auto">
+          <p className="text-sm text-gray-500 mb-2">Explore by topic</p>
+          <div className="flex flex-wrap gap-2">
+            <Link href="/topics/long-distance" className="text-sm font-medium text-[#E7000B] hover:underline">Long Distance</Link>
+            <span className="text-gray-300">·</span>
+            <Link href="/topics/date-ideas" className="text-sm font-medium text-[#E7000B] hover:underline">Date Ideas</Link>
+            <span className="text-gray-300">·</span>
+            <Link href="/topics/relationship-tips" className="text-sm font-medium text-[#E7000B] hover:underline">Relationship Tips</Link>
+            <span className="text-gray-300">·</span>
+            <Link href="/topics/communication" className="text-sm font-medium text-[#E7000B] hover:underline">Communication</Link>
+            <span className="text-gray-300">·</span>
+            <Link href="/topics/questions" className="text-sm font-medium text-[#E7000B] hover:underline">Questions</Link>
+            <span className="text-gray-300">·</span>
+            <Link href="/topics/gifts" className="text-sm font-medium text-[#E7000B] hover:underline">Gifts</Link>
+            <span className="text-gray-300">·</span>
+            <Link href="/topics/travel" className="text-sm font-medium text-[#E7000B] hover:underline">Travel</Link>
+          </div>
+        </div>
+
         {/* Blog List with Filters */}
         <BlogList query={query} category={category} />
       </main>
