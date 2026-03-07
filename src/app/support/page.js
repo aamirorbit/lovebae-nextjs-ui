@@ -99,8 +99,39 @@ export default function SupportPage() {
     }
   };
 
+  const supportFaqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'en',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lovebae.app' },
+      { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://lovebae.app/support' },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(supportFaqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <main className="min-h-screen bg-white">
         {/* Hero */}

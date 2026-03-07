@@ -210,9 +210,40 @@ function CodeLookupSection() {
   );
 }
 
+const creatorsFaqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  inLanguage: 'en',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+
+const creatorsBreadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lovebae.app' },
+    { '@type': 'ListItem', position: 2, name: 'Creator Program', item: 'https://lovebae.app/creators' },
+  ],
+};
+
 export default function CreatorsPage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(creatorsFaqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(creatorsBreadcrumbJsonLd) }}
+      />
       <Header />
       
       {/* Hero Section */}

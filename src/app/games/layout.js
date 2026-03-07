@@ -7,6 +7,7 @@ const gamesJsonLd = {
   description:
     'Play free interactive couple games online — Truth or Dare, Would You Rather, Never Have I Ever, compatibility quizzes, and more. No signup required.',
   url: 'https://lovebae.app/games',
+  inLanguage: 'en',
   publisher: {
     '@type': 'Organization',
     name: 'Lovebae',

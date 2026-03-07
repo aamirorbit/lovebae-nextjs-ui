@@ -44,6 +44,7 @@ export function getPostBySlug(slug) {
       },
       content,
       readingTime: stats.text,
+      wordCount: stats.words,
     };
   } catch (error) {
     console.error(`Error reading post ${slug}:`, error);

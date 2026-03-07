@@ -10,6 +10,7 @@ import ShareButtons from '@/components/blog/ShareButtons';
 import ShareableSnippets from '@/components/blog/ShareableSnippets';
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/lib/blog';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import Breadcrumb from '@/components/shared/Breadcrumb';
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
@@ -170,9 +171,11 @@ export default async function BlogPostPage({ params }) {
     description: post.frontmatter.description,
     image: `https://lovebae.app/blog/${resolvedParams.slug}/opengraph-image`,
     datePublished: date,
-    dateModified: date,
+    dateModified: post.frontmatter.lastUpdated || date,
+    inLanguage: 'en',
+    wordCount: post.wordCount,
     author: {
-      '@type': 'Organization',
+      '@type': 'Person',
       name: author || 'Lovebae Team',
       url: 'https://lovebae.app',
     },
@@ -187,6 +190,10 @@ export default async function BlogPostPage({ params }) {
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://lovebae.app/blog/${resolvedParams.slug}`,
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '[data-speakable="description"]'],
     },
     keywords: tags ? tags.join(', ') : '',
     articleSection: category,
@@ -210,16 +217,14 @@ export default async function BlogPostPage({ params }) {
         <div className={`bg-gradient-to-br ${config.color} pt-32 pb-16`}>
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              {/* Back link */}
-              <Link 
-                href="/blog"
-                className="inline-flex items-center text-gray-600 hover:text-[#E7000B] mb-6 transition-colors"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-                Back to Blog
-              </Link>
+              {/* Breadcrumb */}
+              <div className="flex justify-center mb-6">
+                <Breadcrumb items={[
+                  { label: 'Home', href: '/' },
+                  { label: 'Blog', href: '/blog' },
+                  { label: title },
+                ]} />
+              </div>
               
               {/* Category badge */}
               <div className="flex justify-center mb-4">
@@ -234,11 +239,16 @@ export default async function BlogPostPage({ params }) {
                 {title}
               </h1>
               
+              {/* Description for speakable */}
+              <p data-speakable="description" className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                {post.frontmatter.description}
+              </p>
+
               {/* Meta */}
-              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600">
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600 mt-4">
                 {author && <span>By {author}</span>}
                 {author && formattedDate && <span>•</span>}
-                {formattedDate && <span>{formattedDate}</span>}
+                {formattedDate && <time dateTime={date}>{formattedDate}</time>}
                 <span>•</span>
                 <span>{post.readingTime}</span>
               </div>

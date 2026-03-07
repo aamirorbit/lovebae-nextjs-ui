@@ -1,0 +1,20 @@
+{
+  "name": "Lovebae - The #1 Couples App",
+  "short_name": "Lovebae",
+  "description": "The best couples app for long-distance relationships and everyday love. Share moods, send love letters, play games, and stay connected.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E7000B",
+  "orientation": "portrait-primary",
+  "categories": ["lifestyle", "social"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/assets/brand/lovebae-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

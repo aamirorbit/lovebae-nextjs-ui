@@ -7,6 +7,7 @@ const blogJsonLd = {
   name: 'Lovebae Blog',
   description: 'Relationship tips, date ideas, long-distance relationship advice, and guidance for couples to grow closer every day.',
   url: 'https://lovebae.app/blog',
+  inLanguage: 'en',
   publisher: {
     '@type': 'Organization',
     name: 'Lovebae',

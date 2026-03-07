@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import { GameCTA } from '@/components/games/GameCTA';
 import GamesVideoSection from '@/components/games/GamesVideoSection';
 import ShareButtons from '@/components/blog/ShareButtons';
+import Breadcrumb from '@/components/shared/Breadcrumb';
 
 export const metadata = {
   title: 'Free Couple Games Online — Play With Your Partner Now',
@@ -167,6 +168,7 @@ const howToPlay = [
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
+  inLanguage: 'en',
   mainEntity: faqs.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
@@ -182,6 +184,7 @@ const itemListJsonLd = {
   '@type': 'ItemList',
   name: 'Free Couple Games Online',
   description: 'Interactive relationship games for couples — play free online with no signup.',
+  inLanguage: 'en',
   numberOfItems: games.length,
   itemListElement: games.map((game, i) => ({
     '@type': 'ListItem',
@@ -248,6 +251,12 @@ export default function GamesPage() {
           <div className="absolute top-20 left-1/4 w-72 h-72 bg-pink-200/20 rounded-full blur-3xl" />
           <div className="absolute top-32 right-1/4 w-96 h-96 bg-rose-200/15 rounded-full blur-3xl" />
           <div className="relative container mx-auto px-4 text-center max-w-3xl">
+            <div className="flex justify-center mb-6">
+              <Breadcrumb items={[
+                { label: 'Home', href: '/' },
+                { label: 'Couple Games' },
+              ]} />
+            </div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E7000B] mb-4">
               Free to play
             </p>

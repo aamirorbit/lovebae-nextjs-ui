@@ -73,6 +73,31 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const reviewJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Lovebae Couple Success Stories',
+  inLanguage: 'en',
+  itemListElement: seedStories.map((story, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Review',
+      author: {
+        '@type': 'Person',
+        name: story.authorName,
+      },
+      datePublished: story.publishedAt,
+      reviewBody: story.story,
+      itemReviewed: {
+        '@type': 'MobileApplication',
+        name: 'Lovebae',
+        url: 'https://lovebae.app',
+      },
+    },
+  })),
+};
+
 export default function SuccessStoriesPage() {
   return (
     <>
@@ -80,6 +105,11 @@ export default function SuccessStoriesPage() {
         id="success-stories-breadcrumb"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <Script
+        id="success-stories-reviews"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
       />
       <Header />
       <main className="min-h-screen bg-white">

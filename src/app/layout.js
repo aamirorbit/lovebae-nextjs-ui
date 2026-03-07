@@ -1,7 +1,7 @@
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import Script from 'next/script';
 import WebVitalsReporter from '@/components/analytics/WebVitalsReporter';
+import Script from 'next/script';
 
 export const metadata = {
   title: {
@@ -9,7 +9,7 @@ export const metadata = {
     template: "%s | Lovebae",
   },
   description: "Lovebae is the best couples app for long-distance relationships and everyday love. Share moods, send love letters, raise a virtual pet together, and stay connected. Download free for iOS and Android.",
-  keywords: "couples app, relationship app, long distance relationship app, couple games, love letters app, couple widget, partner app, mood sharing, LDR app, best couples app, relationship goals app",
+  keywords: "couples app, relationship app, long distance relationship app, couple games, love letters app, couple widget, partner app, mood sharing, LDR app, best couples app, relationship goals app, best couples app UK, couples app Australia, relationship app USA",
   metadataBase: new URL('https://lovebae.app'),
   applicationName: 'Lovebae',
   authors: [{ name: 'Lovebae Team', url: 'https://lovebae.app' }],
@@ -22,12 +22,21 @@ export const metadata = {
   },
   // NOTE: Canonical URLs are set per-page in their respective layout.js or page.js files
   // DO NOT set a global canonical here as it causes SEO issues with duplicate canonicals
+  alternates: {
+    languages: {
+      'en-US': 'https://lovebae.app',
+      'en-GB': 'https://lovebae.app',
+      'en-AU': 'https://lovebae.app',
+      'x-default': 'https://lovebae.app',
+    },
+  },
   openGraph: {
     title: 'Lovebae - The #1 Couples App for Long Distance & Everyday Love',
     description: 'Stay connected with your partner through mood sharing, love letters, shared activities, and more. The best app for couples in long-distance relationships.',
     url: 'https://lovebae.app',
     siteName: 'Lovebae',
     locale: 'en_US',
+    alternateLocale: ['en_GB', 'en_AU'],
     type: 'website',
     // OG image is auto-generated from opengraph-image.js
   },
@@ -49,6 +58,7 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  manifest: '/manifest.json',
   verification: {
     ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
@@ -66,16 +76,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning>
-        {children}
-        <SpeedInsights />
-        <WebVitalsReporter />
-        
-        {/* JSON-LD structured data - Organization */}
-        <Script
-          id="org-schema"
+      <head>
+        {/* Resource hints for external domains */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+
+        {/* JSON-LD structured data - rendered inline for crawlers */}
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -83,6 +91,7 @@ export default function RootLayout({ children }) {
               name: 'Lovebae',
               url: 'https://lovebae.app',
               logo: 'https://lovebae.app/assets/brand/lovebae-logo.png',
+              inLanguage: 'en',
               sameAs: [
                 'https://twitter.com/lovebaeapp',
                 'https://instagram.com/lovebaeapp',
@@ -92,16 +101,14 @@ export default function RootLayout({ children }) {
                 '@type': 'ContactPoint',
                 email: 'support@lovebae.app',
                 contactType: 'customer service',
+                areaServed: ['US', 'GB', 'AU', 'CA'],
+                availableLanguage: 'English',
               },
             })
           }}
         />
-        
-        {/* JSON-LD structured data - Mobile Application */}
-        <Script
-          id="app-schema"
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -110,10 +117,12 @@ export default function RootLayout({ children }) {
               url: 'https://lovebae.app',
               applicationCategory: 'LifestyleApplication',
               operatingSystem: 'iOS, Android',
+              inLanguage: 'en',
               offers: {
                 '@type': 'Offer',
                 price: '0',
                 priceCurrency: 'USD',
+                availability: 'https://schema.org/InStock',
                 description: 'Free to download with optional premium subscription',
               },
               description: 'The best couples app for long-distance relationships and everyday love. Share moods, send love letters, raise a virtual pet together, and stay connected.',
@@ -125,21 +134,22 @@ export default function RootLayout({ children }) {
                 worstRating: '1',
               },
               featureList: 'Mood Sharing, Love Letters, Virtual Pet, Couple Widgets, Daily Check-ins, Question Games',
+              countryOfOrigin: {
+                '@type': 'Country',
+                name: 'United States',
+              },
             })
           }}
         />
-        
-        {/* JSON-LD structured data - WebSite with SearchAction */}
-        <Script
-          id="website-schema"
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Lovebae',
               url: 'https://lovebae.app',
+              inLanguage: 'en',
               potentialAction: {
                 '@type': 'SearchAction',
                 target: {
@@ -151,7 +161,12 @@ export default function RootLayout({ children }) {
             })
           }}
         />
-        
+      </head>
+      <body suppressHydrationWarning>
+        {children}
+        <SpeedInsights />
+        <WebVitalsReporter />
+
         {/* Google Analytics - only loads when NEXT_PUBLIC_GA_MEASUREMENT_ID is set */}
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID &&
          process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX' && (
@@ -168,9 +183,8 @@ export default function RootLayout({ children }) {
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', { 
-                    page_path: window.location.pathname,
-                    anonymize_ip: true
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
+                    page_path: window.location.pathname
                   });
                 `
               }}

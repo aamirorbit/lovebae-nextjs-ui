@@ -32,6 +32,7 @@ const jsonLd = {
   url: 'https://lovebae.app/games/36-questions',
   applicationCategory: 'GameApplication',
   operatingSystem: 'Any',
+  inLanguage: 'en',
   browserRequirements: 'Requires a modern web browser',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   author: { '@type': 'Organization', name: 'Lovebae', url: 'https://lovebae.app' },
